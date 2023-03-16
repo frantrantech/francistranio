@@ -8,7 +8,11 @@ function IntroPage() {
   return (
     <div className="background-container">
       <img src="firstscreen.png" className="background-image" alt="Background" />
-      <img src="terminal.svg" className="overlay-image" alt="Overlay" />
+
+      <div className="overlay-image"> 
+        <img src ="terminal.svg"/>
+        <div className = "introduction"> hi</div>
+      </div>
     </div>
   );
 }
