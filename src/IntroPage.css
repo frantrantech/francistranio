@@ -11,25 +11,29 @@
     filter: blur(2px);
   }
   
-  .overlay-image {
-    position: absolute;
+  .terminal-wrapper {
+    position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50vw;
-    height: 50vh;
-    opacity: 0.9;
+    transform: translate(-50%, -140%);
+    width: 60%;
     /* transform: translate(-50%, -170%); */
-
     /* transform: translate(-50%, -50%); */ 
   }
 
+  .terminal-wrapper img{
+    opacity: .9;
+    width: 100%;
+    left: 50%;
+  }
+
 .introduction {
-    color: 	#149414;
+    width: 80%;
+    color: 	#39FF14;
     font-family: monospace;
-    font-size: 50px;
+    font-size: 20px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
