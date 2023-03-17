@@ -1,0 +1,31 @@
+.PortfolioWrapper {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .cardsWrapper {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Set width to 80% */
+  }
+  
+  .portfolioText {
+    position: absolute;
+    font-size: 30px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .card {
+    flex: 1;
+    margin: 0 30px; /* Add a small margin between the cards */
+    background-color: #eee;
+    padding: 20px;
+  }
+  

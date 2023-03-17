@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import './IntroPage.css'
 import { useEffect, useRef } from 'react'
+import { TypeAnimation } from 'react-type-animation';
+import AnimatedArrow from './AnimatedArrow';
 
 function IntroPage() {
 
@@ -10,8 +11,22 @@ function IntroPage() {
       <img src="firstscreen.png" className="background-image" alt="Background" />
 
       <div className="terminal-wrapper"> 
-        <img src ="terminal.svg" />
-        <div className = "introduction"> $ Welcome to francistran.io, I am of course, Francis Tran</div>
+        <img src ="terminal2.svg" />
+        <TypeAnimation
+        className='introduction'
+      sequence={[
+        '$ Welcome to my portfolio, I\'m Francis Tran, a backend software engineer',
+        1000,
+        () => {
+          console.log('Done typing!'); // Place optional callbacks anywhere in the array
+        }
+      ]}
+      wrapper="div"
+      cursor={true}
+      speed={2}
+      style={{ fontSize: '1.5em' }}
+    />
+    
       </div>
     </div>
   );
