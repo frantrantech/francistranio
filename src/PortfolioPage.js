@@ -4,21 +4,26 @@ function PortfolioPage() {
     return(
         <div className="PortfolioWrapper">
             <div className="portfolioText">
-                Portfolio Page Here
+                MY PORTFOLIO
             </div>
-
 
             <div className = "cardsWrapper">
                 <div className="card">
-                    Card1
+                    <a href="https://github.com/yungfran/Application-Filler-Python">
+                        <img src="resume-portfolio-svgrepo-com.svg"/>
+                    </a>
                 </div>
 
                 <div className="card">
-                    Card2
+                    <a href="https://github.com/yungfran/Application-Filler-Python">
+                        <img src="discord-icon-svgrepo-com.svg"/>
+                    </a>
                 </div>
 
                 <div className="card">
-                    Card3
+                    <a href="https://github.com/yungfran/Application-Filler-Python">
+                        <img src="pulling-up-training-silhouette-svgrepo-com.svg"/>
+                    </a>
                 </div>
             </div>
             

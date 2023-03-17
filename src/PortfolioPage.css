@@ -1,16 +1,19 @@
 .PortfolioWrapper {
     height: 100vh;
     position: relative;
+    background-color:#e5e5e5;
   }
   
   .cardsWrapper {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    top: 25%;
+    align-items: center;
+    top: 45%;
     left: 50%;
+    position: absolute;
     transform: translate(-50%, -50%);
-    width: 80%; /* Set width to 80% */
+    width: 80%;
+    gap: 20px; /* add gap between the cards */
   }
   
   .portfolioText {
@@ -20,12 +23,43 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+    font-weight:bold;
+    font:Gill Sans;
   }
   
   .card {
-    flex: 1;
-    margin: 0 30px; /* Add a small margin between the cards */
-    background-color: #eee;
+    background-color: #A0A09F;
     padding: 20px;
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+    opacity: .7;
+    border-radius: 10px;
   }
   
+  .card:before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  .card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cardText{
+    position: absolute;
+  }
+  
+  #discordApp {
+    color: green;
+    background-image: url("resume-portfolio-svgrepo-com.svg");
+    background-repeat: no-repeat;
+  } 
