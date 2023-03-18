@@ -1,0 +1,38 @@
+.background-container {
+    position: relative;
+  }
+  
+  .background-image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(2px);
+  }
+  
+  .terminal-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+  }
+  
+  .terminal-wrapper img {
+    opacity: 0.9;
+    width: 100%;
+    left: 50%;
+  }
+  
+  .introduction {
+    width: 80%;
+    color: #39FF14;
+    font-family: Courier New;
+    position: absolute;
+    text-align: left;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
