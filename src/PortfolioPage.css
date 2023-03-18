@@ -1,11 +1,13 @@
 .PortfolioWrapper {
     height: 80vh;
     position: relative;
-    /* 9898a5 grey
-    e5e5e5 mercury*/
-    background-color:#24243c;
-    color: #8b8be6;
+    background-color:#b9b9f3;
+    color: #24243c;
   }
+
+  /* Main color: #b9b9f3
+
+  */
   
   .cardsWrapper {
     display: flex;

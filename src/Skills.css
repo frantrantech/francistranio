@@ -1,12 +1,11 @@
 
 .skillsWrapper {
     height: 80vh;
-    background-color:#e5e5e5;
+    background-color:#c0c0f4;
     position: relative;
 }
 
 .lineDrawing {
-    top: 1em;
     position: absolute;
     width: 80vw;
     left: 10%;
