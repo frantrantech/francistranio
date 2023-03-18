@@ -31,23 +31,25 @@ function PortfolioPage() {
       <div className="portfolioText">MY PORTFOLIO</div>
 
       <div className="cardsWrapper">
-        <div className="card" ref={(el) => (cardsRef.current[0] = el)}>
-          <a href="https://github.com/yungfran/Application-Filler-Python">
-            <img className="cardImg" src="resume-portfolio-svgrepo-com.svg" />
-          </a>
-        </div>
 
-        <div className="card" ref={(el) => (cardsRef.current[1] = el)} id="discord">
-          <a href="https://github.com/yungfran/interrupted_me">
-            <img src="discord-mark-black.svg" />
-          </a>
-        </div>
-
-        <div className="card" ref={(el) => (cardsRef.current[2] = el)}>
+      <div className="card" ref={(el) => (cardsRef.current[0] = el)}>
           <a href="https://github.com/yungfran/gtg">
             <img src="pulling-up-training-silhouette-svgrepo-com.svg" />
           </a>
         </div>
+
+      <div className="card" ref={(el) => (cardsRef.current[1] = el)}>
+        <a href="https://github.com/yungfran/Application-Filler-Python">
+          <img className="cardImg" src="resume-portfolio-svgrepo-com.svg" />
+        </a>
+      </div>
+
+      <div className="card" ref={(el) => (cardsRef.current[2] = el)} id="discord">
+        <a href="https://github.com/yungfran/interrupted_me">
+          <img src="discord-mark-black.svg" className="filter-green"/>
+        </a>
+      </div>
+
       </div>
     </div>
   );
