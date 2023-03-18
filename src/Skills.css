@@ -1,0 +1,24 @@
+
+.skillsWrapper {
+    height: 80vh;
+    background-color:#e5e5e5;
+    position: relative;
+}
+
+.lineDrawing {
+    top: 1em;
+    position: absolute;
+    width: 80vw;
+    left: 10%;
+    border-top: .5px solid grey;
+}
+
+.skillsText {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 30px;
+}
+

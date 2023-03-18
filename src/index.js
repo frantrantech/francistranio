@@ -2,16 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import IntroPage from './IntroPage';
-import AnimatedArrow from './AnimatedArrow';
 import PortfolioPage from './PortfolioPage';
+import MenuBar from './MenuBar'
+import Skills from './Skills';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     < IntroPage />
+    < MenuBar />
     < PortfolioPage />
+    < Skills />
   </React.StrictMode>
 );
 

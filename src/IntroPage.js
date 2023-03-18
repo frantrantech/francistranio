@@ -2,7 +2,6 @@ import './App.css';
 import './IntroPage.css'
 import { useEffect, useRef } from 'react'
 import { TypeAnimation } from 'react-type-animation';
-import AnimatedArrow from './AnimatedArrow';
 
 function IntroPage() {
 

@@ -17,7 +17,6 @@
     transform: translate(-50%, -50%);
     width: 80%;
     gap: 20px; /* add gap between the cards */
-    
   }
   
   .portfolioText {
@@ -41,13 +40,7 @@
     border-radius: 10px;
     opacity: 0;
 
-    background-color: transparent !important;
-    border:none !important;
-
-  }
-
-  .card:focus, .card:active {
-    outline: none;
+    background-color: transparent;
   }
 
   .card:before {
@@ -65,8 +58,18 @@
     right: 0;
     width: 90%;
     height: 90%;
+    /* object-fit: cover; */
   }
 
+  #disc {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    bottom: 5%;
+    right: 0;
+    width: 90%;
+    height: 90%;
+  }
 
   .card img:hover {
     filter: blur(5px);
