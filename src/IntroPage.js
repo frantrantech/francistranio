@@ -1,6 +1,7 @@
 import './App.css';
 import './IntroPage.css'
 import { useEffect, useRef } from 'react'
+import SoftwareEngineer from './SoftwareEngineer';
 import { TypeAnimation } from 'react-type-animation';
 
 function IntroPage() {
@@ -14,18 +15,19 @@ function IntroPage() {
         <TypeAnimation
         className='introduction'
       sequence={[
-        '$ Welcome to my portfolio, I\'m Francis Tran, a backend software engineer',
+        '$ Welcome to my portfolio, I\'m Francis Tran, a',
         1000,
-        () => {
-          console.log('Done typing!'); // Place optional callbacks anywhere in the array
-        }
+        () => {}
       ]}
       wrapper="div"
-      cursor={true}
-      speed={2}
+      cursor={false}
+      speed={5}
       style={{ fontSize: '1.5em' }}
     />
-    
+      <div className = "software-engineer-animation">
+        < SoftwareEngineer />
+      </div>
+   
       </div>
     </div>
   );

@@ -1,13 +1,21 @@
+
+/* Use this to load the menu bar as we are scrolling down*/
 .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 5vh;
     background-color: #4a4a50;
     color:#e6e6fa;
     z-index: 9999
   }
+
+    /* Use this to stick the menu bar to the top of the screen */
+  .is-fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+  }
+
+
 
   .grid-parent {
     display: grid;
@@ -22,3 +30,8 @@
     .div3 { grid-area: 1 / 10 / 2 / 11; }
     .div4 { grid-area: 1 / 11 / 2 / 12; }
     .div5 { grid-area: 1 / 12 / 2 / 13; }
+
+    .space{
+        padding-top:10px;
+        background-color: #4a4a50;
+    }

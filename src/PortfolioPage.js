@@ -3,12 +3,6 @@ import "./PortfolioPage.css";
 
 function PortfolioPage() {
   const cardsRef = useRef([]);
-  /*
-    Color pallete
-    #e6e6fa lavender
-    #4a4a50 dark grey
-    #9898a5 grey
-  */
 
   useEffect(() => {
     const options = {

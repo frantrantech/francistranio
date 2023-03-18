@@ -4,9 +4,9 @@ import './index.css';
 import IntroPage from './IntroPage';
 import PortfolioPage from './PortfolioPage';
 import MenuBar from './MenuBar'
+import SoftwareEngineer from './SoftwareEngineer';
 import Skills from './Skills';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -14,7 +14,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     < IntroPage />
-    < MenuBar />
     < PortfolioPage />
     < Skills />
   </React.StrictMode>
