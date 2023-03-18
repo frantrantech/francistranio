@@ -49,7 +49,7 @@ function SoftwareEngineer () {
       <h1 className="ml11">
         <span className="text-wrapper">
           <span className="line line1"></span>
-          <span className="letters">SOFTWARE ENGINEER</span>
+          <span className="letters">SOFTWARE&nbsp;ENGINEER</span>
         </span>
       </h1>
     );

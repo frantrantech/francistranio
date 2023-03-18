@@ -11,7 +11,7 @@ function IntroPage() {
       <img src="firstscreen.png" className="background-image" alt="Background" />
 
       <div className="terminal-wrapper"> 
-        <img src ="terminal2.svg" />
+        <img src ="terminal.svg" />
         <TypeAnimation
         className='introduction'
       sequence={[
@@ -22,7 +22,6 @@ function IntroPage() {
       wrapper="div"
       cursor={false}
       speed={5}
-      style={{ fontSize: '1.5em' }}
     />
       <div className = "software-engineer-animation">
         < SoftwareEngineer />

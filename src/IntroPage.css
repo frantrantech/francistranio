@@ -16,6 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+    
   }
   
   .terminal-wrapper img {
@@ -25,21 +26,24 @@
   }
   
   .introduction {
-    width: 80%;
     color: #39FF14;
     font-family: Menlo;
+    max-width: 80%;
+    overflow: hidden;
     position: absolute;
     text-align: left;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+    white-space: nowrap;
+    font-size: 1.5vw;
+}
 
   .software-engineer-animation {
     position: absolute;
     top: 50%;
-    left: 55%;
-    width: 75%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    white-space: nowrap;
   }
   

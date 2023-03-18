@@ -1,9 +1,7 @@
 .ml11 {
   font-weight: 1000;
-  font-size: 3em;
   color: #39FF14;
   font-family: Arial Rounded MT Bold;
-
 }
 
 .ml11 .text-wrapper {
@@ -32,4 +30,5 @@
 .ml11 .letter {
   display: inline-block;
   line-height: 1em;
+  font-size: 4.5vw
 }
