@@ -34,27 +34,24 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 15vw;
-    grid-row-gap: 3vh;
+    grid-row-gap: 3.4vh;
     overflow-wrap: hidden;
     
 
 }
 
 .line-animiation-wrapper div{
-    color:white;
+    color:transparent;
     background-color: #a9a9ca;
     text-align:left;
-    padding-right: 15vw;
-    padding-top: 1.25vh;
-    padding-bottom: 1.25vh;
+    padding-right: 20vw;
+    padding-top: 1.4vh;
+    padding-bottom: 1.4vh;
     padding-left: 10px;
     border-radius: 8px;
     position: relative;
     overflow:hidden;
 }
-
-
-
 
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -66,31 +63,31 @@
 .div7 { grid-area: 3 / 2 / 4 / 3; }
 .div8 { grid-area: 4 / 2 / 5 / 3; }
 
-.color-animation-90 {
+.color-animation-90.animate {
     background: linear-gradient(to right, #1b1b20 90%, #a9a9ca 10%) no-repeat;
     background-size: 0% 100%;
     animation: gradient-slide 2s forwards;
   }
 
-  .color-animation-80 {
+  .color-animation-80.animate {
     background: linear-gradient(to right, #1b1b20 80%, #a9a9ca 20%) no-repeat;
     background-size: 0% 100%;
     animation: gradient-slide 2s forwards;
   }
 
-  .color-animation-70 {
+  .color-animation-70.animate {
     background: linear-gradient(to right, #1b1b20 70%, #a9a9ca 30%) no-repeat;
     background-size: 0% 100%;
     animation: gradient-slide 2s forwards;
   }
 
-  .color-animation-60 {
+  .color-animation-60.animate {
     background: linear-gradient(to right, #1b1b20 60%, #a9a9ca 40%) no-repeat;
     background-size: 0% 100%;
     animation: gradient-slide 2s forwards;
   }
 
-  .color-animation-50 {
+  .color-animation-50.animate {
     background: linear-gradient(to right, #1b1b20 50%, #a9a9ca 50%) no-repeat;
     background-size: 0% 100%;
     animation: gradient-slide 2s forwards;
@@ -98,10 +95,12 @@
 
 
 
-  .text-slide-animation{
+
+  .text-slide-animation.animate{
     /*  force the element to behave as an inline-level block container, display as part of grid can mess up animations*/
     display: inline-block; 
-    animation: text-slide 1s forwards;
+    animation: text-slide 1.75s forwards;
+    animation-delay: .5s
   }
   
   @keyframes gradient-slide {
@@ -112,9 +111,11 @@
 
   @keyframes text-slide {
     from {
+        color:transparent;
         transform: translateX(-150%);
       }
       to {
+        color:white;
         transform: translateX(0%);
       }
     
