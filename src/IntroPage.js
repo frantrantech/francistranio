@@ -43,16 +43,15 @@ function IntroPage() {
            Animejs Outline is #e5e5e5 (for visibility) 
            Circle outline*/}
           <svg width="100%" height="100%" viewBox="-1 -1 1003 502" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path className="outline animate-opacity-and-black-stroke " d="M0 35C0 15.67 15.67 0 35 0h931c19.33 0 35 15.67 35 35v16H0V35Z" fill="#E5E5E5" stroke="#e5e5e5"/>
-            <path className="outline animate-opacity-and-black-stroke" d="M0 51h1001v414c0 19.33-15.67 35-35 35H35c-19.33 0-35-15.67-35-35V51Z" fill="#A0A09F" stroke="#A0A09F"/>
+            <path className="outline animate-opacity-and-black-stroke-from-mercury " d="M0 35C0 15.67 15.67 0 35 0h931c19.33 0 35 15.67 35 35v16H0V35Z" fill="#E5E5E5" stroke="#e5e5e5"/>
+            <path className="outline animate-opacity-and-black-stroke-from-gray" d="M0 51h1001v414c0 19.33-15.67 35-35 35H35c-19.33 0-35-15.67-35-35V51Z" fill="#A0A09F" stroke="#A0A09F"/>
 
-            <path className="circles animate-opacity-and-black-stroke" fill="#EC5800" stroke="#e5e5e5" d="M32.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
-            <path className="circles animate-opacity-and-black-stroke" fill="#F4C430" stroke="#e5e5e5" d="M71.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
-            <path className="circles animate-opacity-and-black-stroke" fill="#0BDA51" stroke="#e5e5e5" d="M110.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
+            <path className="circles animate-opacity-circles" fill="#EC5800" stroke="#e5e5e5" d="M32.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
+            <path className="circles animate-opacity-circles" fill="#F4C430" stroke="#e5e5e5" d="M71.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
+            <path className="circles animate-opacity-circles" fill="#0BDA51" stroke="#e5e5e5" d="M110.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
           </svg>
 
          {/* End Terminal Svg*/}
-         {/* <img src ="terminal.svg" />  */}
 
         <TypeAnimation
           className='introduction'

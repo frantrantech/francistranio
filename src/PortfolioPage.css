@@ -1,11 +1,11 @@
 .PortfolioWrapper {
     height: 80vh;
     position: relative;
-    background-color:#b9b9f3;
+    background-color:#d0d0d6;
     color: #24243c;
   }
 
-  /* Main color: #b9b9f3
+  /* Main color: ##626275
 
   */
   
@@ -24,7 +24,7 @@
   
   .portfolioText {
     position: absolute;
-    font-size: 30px;
+    font-size: 2em;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@
 @keyframes slide-in-left {
     from {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateY(50%);
     }
     to {
         opacity: 1;

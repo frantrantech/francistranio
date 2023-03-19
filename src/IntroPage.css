@@ -51,21 +51,47 @@
 
   /* Terminal Animation css */
   /* Outline drawing is done by anime 
-     changing color and fading in the fill is done by css*/
-  .animate-opacity-and-black-stroke {
+     changing color and fading in the fill is done by css
+     Change opacity to .9 and change from mercury(#e5e5e5 stroke to black)*/
+
+  .animate-opacity-and-black-stroke-from-mercury {
     stroke-width: 2px;
     fill-opacity: 0;
     stroke:"#e5e5e5";
     /* animation-name animation-delay transition-timing-function: */
-    animation: fill-in-color 3s ease-in-out; 
-    animation-delay: 0s;
+    animation: fill-in-color-and-black-stroke-mercury 2s ease-in-out; 
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards; /* Keep the styling after the animation is finished*/
+  }
+
+
+    /* Change opacity to .9 and change from mercury(#A0A09F stroke to black*/
+    .animate-opacity-and-black-stroke-from-gray {
+      stroke-width: 2px;
+      fill-opacity: 0;
+      stroke:"#e5e5e5";
+      /* animation-name animation-delay transition-timing-function: */
+      animation: fill-in-color-and-black-stroke-dark-gray 2s ease-in-out; 
+      animation-delay: 1.3s;
+      animation-fill-mode: forwards; /* Keep the styling after the animation is finished*/
+    }
+  
+
+  /* Only fill in opacity*/
+  .animate-opacity-circles {
+    stroke-width: 2px;
+    fill-opacity: 0;
+    stroke:"#e5e5e5";
+    /* animation-name animation-delay transition-timing-function: */
+    animation: fill-in-color 2s ease-in-out; 
+    animation-delay: 1.3s;
     animation-fill-mode: forwards; /* Keep the styling after the animation is finished*/
   }
 
 
 
   /* Fade in the fill */
-@keyframes fill-in-color {
+@keyframes fill-in-color-and-black-stroke-mercury {
     from {
       fill-opacity:0;
       stroke: #e5e5e5;
@@ -75,12 +101,27 @@
       stroke:black;
     }
   }
-@keyframes fade-stroke-black {
-  from {
-    stroke: #e5e5e5;
+
+  @keyframes fill-in-color-and-black-stroke-dark-gray {
+    from {
+      fill-opacity:0;
+      stroke: #A0A09F;
+    }
+    to {
+      fill-opacity:0.9;
+      stroke:black;
+    }
   }
 
-  to {
-    stroke:black;
+
+  @keyframes fill-in-color{
+    from {
+      fill-opacity:0;
+      stroke-opacity: 1;
+    }
+    to {
+      fill-opacity:0.9;
+      stroke-opacity: 0.9;
+    }
   }
-}
+
