@@ -1,7 +1,7 @@
 
 .skills-wrapper {
     height: 80vh;
-    background-color:#c0c0f4;
+    background-color:#e0e0e3;
     position: relative;
 }
 
@@ -32,8 +32,7 @@
 .line-animiation-wrapper{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 15vw;
     grid-row-gap: 3vh;
     overflow-wrap: hidden;
@@ -42,42 +41,83 @@
 }
 
 .line-animiation-wrapper div{
-    color:black;
-    background-color: #A0A09F;
-    text-align:center;
-    padding-left: 12vw;
-    padding-right: 12vw;
+    color:white;
+    background-color: #a9a9ca;
+    text-align:left;
+    padding-right: 15vw;
     padding-top: 1.25vh;
     padding-bottom: 1.25vh;
-    border-radius: 5px;
+    padding-left: 10px;
+    border-radius: 8px;
+    position: relative;
+    overflow:hidden;
 }
 
-.no-bar {
-    background-color: none;
-}
 
 
-.div1 { grid-area: 1 / 1 / 2 / 2;}
+
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
 .div2 { grid-area: 2 / 1 / 3 / 2; }
 .div3 { grid-area: 3 / 1 / 4 / 2; }
 .div4 { grid-area: 4 / 1 / 5 / 2; }
-.div5 { grid-area: 5 / 1 / 6 / 2; }
-.div6 { grid-area: 1 / 2 / 2 / 3; }
-.div7 { grid-area: 2 / 2 / 3 / 3; }
-.div8 { grid-area: 3 / 2 / 4 / 3; }
-.div9 { grid-area: 4 / 2 / 5 / 3; }
-.div10 { grid-area: 5 / 2 / 6 / 3; }
+.div5 { grid-area: 1 / 2 / 2 / 3; }
+.div6 { grid-area: 2 / 2 / 3 / 3; }
+.div7 { grid-area: 3 / 2 / 4 / 3; }
+.div8 { grid-area: 4 / 2 / 5 / 3; }
 
-
-.color-animation {
-    background: linear-gradient(to right, #b9f3b9 90%, #A0A09F 10%) no-repeat;
+.color-animation-90 {
+    background: linear-gradient(to right, #1b1b20 90%, #a9a9ca 10%) no-repeat;
     background-size: 0% 100%;
     animation: gradient-slide 2s forwards;
   }
+
+  .color-animation-80 {
+    background: linear-gradient(to right, #1b1b20 80%, #a9a9ca 20%) no-repeat;
+    background-size: 0% 100%;
+    animation: gradient-slide 2s forwards;
+  }
+
+  .color-animation-70 {
+    background: linear-gradient(to right, #1b1b20 70%, #a9a9ca 30%) no-repeat;
+    background-size: 0% 100%;
+    animation: gradient-slide 2s forwards;
+  }
+
+  .color-animation-60 {
+    background: linear-gradient(to right, #1b1b20 60%, #a9a9ca 40%) no-repeat;
+    background-size: 0% 100%;
+    animation: gradient-slide 2s forwards;
+  }
+
+  .color-animation-50 {
+    background: linear-gradient(to right, #1b1b20 50%, #a9a9ca 50%) no-repeat;
+    background-size: 0% 100%;
+    animation: gradient-slide 2s forwards;
+  }
+
+
+
+  .text-slide-animation{
+    /*  force the element to behave as an inline-level block container, display as part of grid can mess up animations*/
+    display: inline-block; 
+    animation: text-slide 1s forwards;
+  }
   
   @keyframes gradient-slide {
-  to {
-    background-size: 100% 100%;
+    to {
+        background-size: 100% 100%;
+    }
   }
+
+  @keyframes text-slide {
+    from {
+        transform: translateX(-150%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    
   }
+
 

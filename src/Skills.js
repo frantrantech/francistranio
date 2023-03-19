@@ -24,17 +24,17 @@ function Skills () {
             
             <div className = "grid-container">
                 <div className = "line-animiation-wrapper ">
-                    <div class="div1 no-bar"> Programming </div>
-                    <div class="div6 no-bar"> Experiences</div>
+                    <div className="div1 color-animation-90"> <span className="text-slide-animation"> Java </span> </div>
+                    
 
-                    <div class="div2 color-animation" >d2 </div>
-                    <div class="div3 color-animation">d3 </div>
-                    <div class="div4"> d4</div>
-                    <div class="div5"> d5</div>
-                    <div class="div7">  d7</div>
-                    <div class="div8"> d8 </div>
-                    <div class="div9"> d9</div>
-                    <div class="div10"> d10 </div>
+                    <div className="div2 color-animation-80" >  <span className="text-slide-animation"> Python </span>  </div>
+
+                    <div className="div3 color-animation-80">  <span className="text-slide-animation"> TypeScript / React / Node </span></div>
+                    <div className="div4 color-animation-70"> <span className="text-slide-animation"> Swift </span> </div>
+                    <div className="div5 color-animation-90"> <span className="text-slide-animation"> Backend Systems </span></div>
+                    <div className="div6 color-animation-70"> <span className="text-slide-animation"> Amazon Web Services</span> </div>
+                    <div className="div7 color-animation-60"> <span className="text-slide-animation"> Full Stack Web Development</span> </div>
+                    <div className="div8 color-animation-50">  <span className="text-slide-animation"> iOS </span> </div>
 
                 </div>
             </div>
