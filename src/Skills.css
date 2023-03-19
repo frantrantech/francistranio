@@ -42,7 +42,7 @@
 
 .line-animiation-wrapper div{
     color:transparent;
-    background-color: #a9a9ca;
+    background-color: #a9a9ca !important;
     text-align:left;
     padding-right: 20vw;
     padding-top: 1.4vh;
@@ -118,7 +118,10 @@
         color:white;
         transform: translateX(0%);
       }
-    
+  }
+
+  .line-animiation-wrapper:nth-child(1).text-slide-animation {
+   color:aqua !important;
   }
 
 
