@@ -1,31 +1,13 @@
 import './App.css';
 import './IntroPage.css'
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import SoftwareEngineer from './SoftwareEngineer';
 import { TypeAnimation } from 'react-type-animation';
 import anime from 'animejs/lib/anime.es.js';
 
 function IntroPage() {
-  const pathRefs = useRef([]);
 
   useEffect(() => {
-    // const paths = pathRefs.current;
-    // const animation = anime.timeline();
-
-    // paths.forEach((path) => {
-    //   const length = path.getTotalLength();
-
-    //   // Set the initial stroke dash offset to the length of the path
-    //   path.style.strokeDashoffset = length;
-
-    //   // Add the path to the animation timeline
-    //   animation.add({
-    //     targets: path,
-    //     strokeDashoffset: [length, 0],
-    //     duration: 2000,
-    //     easing: 'easeInOutSine'
-    //   });
-    // });
 
     anime({
       targets: '.outline',
@@ -55,37 +37,35 @@ function IntroPage() {
 
       <div className="terminal-wrapper"> 
 
-        {/* Start Terminal Svg
-           */}
-          {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1004.5 533.99" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-                <path className="outline" transform="scale(1.00215 1.0381)" fill="#e5e5e5" stroke="#da14ff" d="M37 0h928.348s37 0 37 37v440.386s0 37-37 37H37s-37 0-37-37V37S0 0 37 0"/>
-            
-                {/* <path className="terminal-body" fill="#6f6f92" stroke="#000000" d="M0 51.256h1004.502v350.265H0Z"/>
-                <path className="terminal-body" fill="#6f6f92" stroke="#" d="M35 167.256h934.502s35 0 35 35v296.826s0 35-35 35H35s-35 0-35-35V202.256s0-35 35-35"/> 
-            
-                <path className="circles"fill="#ec5800" stroke="#000000" d="M27.085 29.907a11.904 11.29 0 1 0 23.807 0 11.904 11.29 0 1 0-23.807 0"/>
-                <path className="circles" fill="#f4c430" stroke="#000000" d="M59.911 29.907a11.904 11.29 0 1 0 23.806 0 11.904 11.29 0 1 0-23.806 0"/>
-                <path className="circles" fill="#0bda51" stroke="#000000" d="M90.582 29.907a11.904 11.29 0 1 0 23.806 0 11.904 11.29 0 1 0-23.806 0"/> 
-              </svg> */}
-             
-        <img src ="terminal.svg" /> 
+        {/* Start Terminal Svg  */}
+        {/* General animation strategy:
+           set opacity fill for all elems to .9 -> begin animation to go from opacity 0 -> 0.9
+           Animejs Outline is #e5e5e5 (for visibility) 
+           Circle outline*/}
+          <svg width="100%" height="100%" viewBox="-1 -1 1003 502" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path className="outline animate-opacity-and-black-stroke " d="M0 35C0 15.67 15.67 0 35 0h931c19.33 0 35 15.67 35 35v16H0V35Z" fill="#E5E5E5" stroke="#e5e5e5"/>
+            <path className="outline animate-opacity-and-black-stroke" d="M0 51h1001v414c0 19.33-15.67 35-35 35H35c-19.33 0-35-15.67-35-35V51Z" fill="#A0A09F" stroke="#A0A09F"/>
 
-
+            <path className="circles animate-opacity-and-black-stroke" fill="#EC5800" stroke="#e5e5e5" d="M32.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
+            <path className="circles animate-opacity-and-black-stroke" fill="#F4C430" stroke="#e5e5e5" d="M71.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
+            <path className="circles animate-opacity-and-black-stroke" fill="#0BDA51" stroke="#e5e5e5" d="M110.5 29.5a11 11 0 1 0 22 0 11 11 0 1 0-22 0"/>
+          </svg>
 
          {/* End Terminal Svg*/}
+         {/* <img src ="terminal.svg" />  */}
 
         <TypeAnimation
           className='introduction'
           sequence={[
             '', // Initial Delay setting
-            5000,
+            1600,
             '$ Welcome to my portfolio, I\'m Francis Tran, a',
             1000,
             () => {}
           ]}
           wrapper="div"
           cursor={false}
-          speed={5}/>
+          speed={10}/>
 
       <div className = "software-engineer-animation">
         < SoftwareEngineer />
