@@ -16,6 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+    opacity: 0.9;
     
   }
   
@@ -47,3 +48,39 @@
     white-space: nowrap;
   }
   
+
+  /* Terminal Animation css */
+  /* Outline drawing is done by anime 
+     changing color and fading in the fill is done by css*/
+  .animate-opacity-and-black-stroke {
+    stroke-width: 2px;
+    fill-opacity: 0;
+    stroke:"#e5e5e5";
+    /* animation-name animation-delay transition-timing-function: */
+    animation: fill-in-color 3s ease-in-out; 
+    animation-delay: 0s;
+    animation-fill-mode: forwards; /* Keep the styling after the animation is finished*/
+  }
+
+
+
+  /* Fade in the fill */
+@keyframes fill-in-color {
+    from {
+      fill-opacity:0;
+      stroke: #e5e5e5;
+    }
+    to {
+      fill-opacity:0.9;
+      stroke:black;
+    }
+  }
+@keyframes fade-stroke-black {
+  from {
+    stroke: #e5e5e5;
+  }
+
+  to {
+    stroke:black;
+  }
+}
