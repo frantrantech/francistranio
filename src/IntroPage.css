@@ -16,6 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+    opacity: 0.9;
     
   }
   
@@ -47,3 +48,33 @@
     white-space: nowrap;
   }
   
+
+  /* Terminal Animation css */
+  .outline {
+    fill-opacity:0.0;
+    stroke-width: 2px;
+    /* animation: fill-in-circle-color 3s ease-in-out; */
+  }
+
+  .circles {
+    fill-opacity:0;
+    stroke:"#e5e5e5";
+    animation: fill-in-circle-color 3s ease-in-out;
+    animation-delay: 1s;
+  }
+
+  .terminal-body {
+    /* animation: fill-in-circle-color 0.3s ease-in-out; */
+  }
+
+
+
+
+@keyframes fill-in-circle-color {
+    from {
+        fill-opacity:0;
+    }
+    to {
+      fill-opacity:0.9;
+    }
+  }

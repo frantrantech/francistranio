@@ -1,1 +1,15 @@
-<svg id="e72awdTso8B1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1004.5 533.99" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><g transform="matrix(1.002149 0 0 0.950509-50.557906-2.985321)"><rect width="1002.347977" height="514.385956" rx="37" ry="37" transform="matrix(1 0 0 1.092173 50.449489 3.14076)" fill="#e5e5e5" stroke="#000"/><ellipse rx="16.294761" ry="16.294761" transform="matrix(.728929 0 0 0.728929 89.354018 34.604649)" fill="#ec5800" stroke-width="0"/><ellipse rx="16.294761" ry="16.294761" transform="matrix(.728929 0 0 0.728929 122.109466 34.604649)" fill="#f4c430" stroke-width="0"/><ellipse rx="16.294761" ry="16.294761" transform="matrix(.728929 0 0 0.728929 152.714528 34.604649)" fill="#0bda51" stroke-width="0"/></g><rect width="1004.502022" height="350.264784" rx="0" ry="0" transform="translate(0 51.256039)" fill="#a0a09f" stroke="#494a4a"/><rect width="1004.502022" height="366.826339" rx="35" ry="35" transform="translate(0 167.256039)" fill="#a0a09f" stroke-width="0"/></svg>
+<svg width="1001" height="500" viewBox="0 0 1001 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_0_1" fill="white">
+<path stroke="black" d="M0 35C0 15.67 15.67 0 35 0H966C985.33 0 1001 15.67 1001 35V51H0V35Z"/>
+</mask>
+<path stroke="black" d="M0 35C0 15.67 15.67 0 35 0H966C985.33 0 1001 15.67 1001 35V51H0V35Z" fill="#E5E5E5"/>
+<path stroke="black" d="M-1 35C-1 15.1177 15.1177 -1 35 -1H966C985.882 -1 1002 15.1177 1002 35H1000C1000 16.2223 984.778 1 966 1H35C16.2223 1 1 16.2223 1 35H-1ZM1002 51.5H-1L1 50.5H1000L1002 51.5ZM-1 51.5V35C-1 15.1177 15.1177 -1 35 -1V1C16.2223 1 1 16.2223 1 35V50.5L-1 51.5ZM966 -1C985.882 -1 1002 15.1177 1002 35V51.5L1000 50.5V35C1000 16.2223 984.778 1 966 1V-1Z" fill="black" mask="url(#path-1-inside-1_0_1)"/>
+<mask id="path-3-inside-2_0_1" fill="white">
+<path stroke="black" d="M0 51H1001V465C1001 484.33 985.33 500 966 500H35C15.67 500 0 484.33 0 465V51Z"/>
+</mask>
+<path stroke="black" d="M0 51H1001V465C1001 484.33 985.33 500 966 500H35C15.67 500 0 484.33 0 465V51Z" fill="#A0A09F"/>
+<path stroke="black" d="M-1 50.5H1002L1000 51.5H1L-1 50.5ZM1002 465C1002 484.882 985.882 501 966 501H35C15.1177 501 -1 484.882 -1 465H1C1 483.778 16.2223 499 35 499H966C984.778 499 1000 483.778 1000 465H1002ZM35 501C15.1177 501 -1 484.882 -1 465V50.5L1 51.5V465C1 483.778 16.2223 499 35 499V501ZM1002 50.5V465C1002 484.882 985.882 501 966 501V499C984.778 499 1000 483.778 1000 465V51.5L1002 50.5Z" fill="black" mask="url(#path-3-inside-2_0_1)"/>
+<circle cx="43.5" cy="29.5" r="11" fill="#EC5800" stroke="black"/>
+<circle cx="82.5" cy="29.5" r="11" fill="#F4C430" stroke="black"/>
+<circle cx="121.5" cy="29.5" r="11" fill="#0BDA51" stroke="black"/>
+</svg>
