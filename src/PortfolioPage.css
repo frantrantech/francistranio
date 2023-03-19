@@ -24,7 +24,7 @@
   
   .portfolioText {
     position: absolute;
-    font-size: 30px;
+    font-size: 2em;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);

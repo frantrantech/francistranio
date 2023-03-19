@@ -4,8 +4,8 @@ import './index.css';
 import IntroPage from './IntroPage';
 import PortfolioPage from './PortfolioPage';
 import MenuBar from './MenuBar'
-import SoftwareEngineer from './SoftwareEngineer';
 import Skills from './Skills';
+import Contact from './Contact';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -16,6 +16,7 @@ root.render(
     < IntroPage />
     < PortfolioPage />
     < Skills />
+    < Contact />
   </React.StrictMode>
 );
 
