@@ -1,11 +1,44 @@
-.contactWrapper {
+.contact-wrapper {
     position: relative;
+}
+
+.get-in-touch{
+    text-align: center;
+    padding-top: 8vh;
+    padding-bottom: .75em;
+    font-weight: 700;
+    font-size: 3em;
     
 }
 
-.contactText{
+.draw-line {
+    position: absolute;
+    width:20%;
+    border-top:solid;
+    transform:translateX(200%)
+}
+
+.contact-text-placement {
+    padding-top:2em;
+}
+
+
+.contact-wrapper{
+    background-color: #1b1b20;
+    color: #a9a9ca;
+}
+
+.contact-text{
+    font-family: Menlo;
+    font-size:1em;
+    padding-bottom:1.75em;
     text-align: center;
-    padding-top: 50px;
-    font-weight: 700;
-    font-size: 2em;
+}
+
+a {
+    color:#39FF14
+}
+
+footer {
+    background-color: #1b1b20;
 }
