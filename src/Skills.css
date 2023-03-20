@@ -100,7 +100,6 @@
     /*  force the element to behave as an inline-level block container, display as part of grid can mess up animations*/
     display: inline-block; 
     animation: text-slide 1.75s forwards;
-    animation-delay: .5s
   }
   
   @keyframes gradient-slide {
