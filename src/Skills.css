@@ -33,11 +33,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 15vw;
-    grid-row-gap: 3.4vh;
+    grid-column-gap: 15vw; 
+    grid-row-gap: 3.8vh;
     overflow-wrap: hidden;
-    
-
 }
 
 .line-animiation-wrapper div{
@@ -100,7 +98,6 @@
     /*  force the element to behave as an inline-level block container, display as part of grid can mess up animations*/
     display: inline-block; 
     animation: text-slide 1.75s forwards;
-    animation-delay: .5s
   }
   
   @keyframes gradient-slide {
