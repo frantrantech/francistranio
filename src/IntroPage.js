@@ -1,4 +1,3 @@
-import './App.css';
 import './IntroPage.css'
 import { useEffect } from 'react'
 import SoftwareEngineer from './SoftwareEngineer';
