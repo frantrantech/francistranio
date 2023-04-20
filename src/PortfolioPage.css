@@ -4,10 +4,6 @@
     background-color:#d0d0d6;
     color: #24243c;
   }
-
-  /* Main color: ##626275
-
-  */
   
   .cardsWrapper {
     display: flex;
@@ -16,10 +12,9 @@
     top: 45%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     width: 80%;
     gap: 20px; /* add gap between the cards */
-    
   }
   
   .portfolioText {
@@ -36,16 +31,33 @@
   .card {
     /* background-color: #A0A09F; */
     padding: 20px;
-    flex: 1;
+    flex-grow: 1;
+    flex-basis: 1;
+    flex-shrink: 0; /* Don't resize our card*/
     margin: 0 10px;
     position: relative;
     opacity: .7;
     border-radius: 10px;
     opacity: 0;
-
     background-color: transparent !important;
-    border:none !important;
+    box-sizing: border-box !important; /* Don't resize our card*/
+    /* border: solid #d0d0d6 2px; */
 
+    /* Begin box drawing animation*/
+    
+  }
+
+
+  /* When a card is hovered, apply blur to img*/
+  .card:hover img {
+    filter: blur(5px);
+  }
+
+  .card:hover .app-name{
+    animation-name: fade-in-text;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
   }
 
   .card:focus, .card:active {
@@ -70,9 +82,6 @@
   }
 
 
-  .card img:hover {
-    filter: blur(5px);
-  }
 
   .cardText{
     position: absolute;
@@ -132,3 +141,103 @@
         transform: none;
     }
   }
+
+  .app-name {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    font-size: 1.25em;
+    color: white;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0;
+    text-align: center;
+  }
+
+  @keyframes fade-in-text{
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+
+  .card > span:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 0;
+    border: 1px solid #24243c;
+    border-left: none;
+    border-bottom: none;
+    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+  }
+  
+  .card:hover > span:after {
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+  }
+  
+  .card > span:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 20px;
+    height: 0;
+    border: 1px solid #24243c;
+    border-right: none;
+    border-bottom: none;
+  
+    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+  }
+  
+  /* Top left corner Animation*/
+  
+  .card:hover > span:before {
+    width: calc(50% - 1px);
+    height: calc(100% - 2px);
+    transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+  }
+  
+  .card > span > span:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  
+  .card:hover > span > span:before {
+    opacity: 1;
+    border-bottom: 1px solid #24243c;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+  }
+  
+  .card > span > span:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  
+  /* bottom left animation */
+  .card:hover > span > span:after {
+    opacity: 1;
+    border-bottom: 1px solid #24243c;
+    width: calc(50%);
+    height: 1px;
+    transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+  }
+  
