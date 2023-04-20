@@ -7,16 +7,17 @@ import MenuBar from './MenuBar'
 import Skills from './Skills';
 import Contact from './Contact';
 import reportWebVitals from './reportWebVitals';
+import LoadingScreen from './LoadingScreen';
+import Suspense from 'react'
+// import App from './App'
 
 
+const App = React.lazy(() => import('./App'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    < IntroPage />
-    < PortfolioPage />
-    < Skills />
-    < Contact />
+    <App />
   </React.StrictMode>
 );
 

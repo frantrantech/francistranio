@@ -33,18 +33,41 @@ function PortfolioPage() {
       <div className="cardsWrapper">
 
         <div className="card" ref={(el) => (cardsRef.current[0] = el)}>
+            <span>
+              <span>
+                <span className="app-name">
+                    GTG Calisthenics
+                </span>
+              </span>
+            </span>
             <a href="https://github.com/yungfran/gtg">
               <img src="pulling-up-training-silhouette-svgrepo-com.svg" />
+
             </a>
+            
           </div>
 
         <div className="card" ref={(el) => (cardsRef.current[1] = el)}>
+            <span>
+              <span>
+                <span className="app-name">
+                    Application Filler
+                </span>
+              </span>
+            </span>
           <a href="https://github.com/yungfran/Application-Filler-Python">
             <img className="cardImg" src="resume-portfolio-svgrepo-com.svg" />
           </a>
         </div>
 
         <div className="card" ref={(el) => (cardsRef.current[2] = el)} id="discord">
+            <span>
+              <span>
+                <span className="app-name">
+                    GTG Calisthenics
+                </span>
+              </span>
+            </span>
           <a href="https://github.com/yungfran/interrupted_me">
             <img src="discord-mark-black.svg" className="filter-green"/>
           </a>
