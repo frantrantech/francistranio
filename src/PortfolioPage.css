@@ -154,6 +154,13 @@
     text-align: center;
   }
 
+  .app-description {
+    left:25%;
+    top: 50%;
+    transform: translateY(100%);
+ 
+  }
+
   @keyframes fade-in-text{
     from {
         opacity:0;

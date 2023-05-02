@@ -37,6 +37,11 @@ function PortfolioPage() {
               <span>
                 <span className="app-name">
                     GTG Calisthenics
+
+                    <div className="app-description">
+                    A web application to help you track your calisthenics progress.
+                  </div>
+
                 </span>
               </span>
             </span>
@@ -52,6 +57,11 @@ function PortfolioPage() {
               <span>
                 <span className="app-name">
                     Application Filler
+
+                  <div className="app-description">
+                    A CLI tool to automatically apply to jobs on Lever.
+                  </div>
+
                 </span>
               </span>
             </span>
@@ -64,7 +74,11 @@ function PortfolioPage() {
             <span>
               <span>
                 <span className="app-name">
-                    GTG Calisthenics
+                    interrupted_me
+
+                    <div className="app-description">
+                    An all in one discord bot to annoy all your friends by interrupting them when they speak
+                    </div>
                 </span>
               </span>
             </span>
