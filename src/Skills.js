@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react"
 
 function Skills() {
     const animatingElemsRef = useRef([]);
+    const skills_text_ref = useRef(null);
 
     useEffect(() => {
       const options = {
@@ -11,7 +12,7 @@ function Skills() {
         threshold: 0.75,
       };
   
-      const observer = new IntersectionObserver((entries) => {
+      const skills_observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.intersectionRatio > 0.5) {
             entry.target.classList.add("animate");
@@ -20,16 +21,28 @@ function Skills() {
       }, options);
   
       animatingElemsRef.current.forEach((card) => {
-        observer.observe(card);
+        skills_observer.observe(card);
       });
+
+      const skills_text_observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0.5) {
+            entry.target.classList.add("animate-skills");
+          } 
+        });
+      }, options);
+
+      skills_text_observer.observe(skills_text_ref.current);
+
+
   
-      return () => observer.disconnect();
+      return () => skills_observer.disconnect();
     }, []);
 
   return (
     <div className="skills-wrapper">
       <div className="separation-drawing"></div>
-      <div className="skills-text">SKILLS</div>
+      <div className="skills-text" ref={skills_text_ref}>SKILLS</div>
       <div className="grid-container">
         <div className="line-animiation-wrapper">
 

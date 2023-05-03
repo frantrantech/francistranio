@@ -56,7 +56,7 @@ function IntroPage() {
           className='introduction'
           sequence={[
             '', // Initial Delay setting
-            1600,
+            2500,
             '$ Welcome to my portfolio, I\'m Francis Tran, a',
             1000,
             () => {}

@@ -20,7 +20,7 @@ function SoftwareEngineer () {
           opacity: [0.5,1],
           easing: "easeOutExpo",
           duration: 700,
-          delay: 6000
+          delay: 7000
         })
         .add({
           targets: '.ml11 .line',

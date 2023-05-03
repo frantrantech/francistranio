@@ -19,6 +19,7 @@
   
   .portfolioText {
     position: absolute;
+    opacity: 0;
     font-size: 2em;
     top: 10%;
     left: 50%;
@@ -26,6 +27,13 @@
     text-align: center;
     font-weight:bold;
     font-family: "Gill Sans", sans-serif;
+  }
+
+  .animate-text {
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
   }
   
   .card {
@@ -82,7 +90,6 @@
   }
 
 
-
   .cardText{
     position: absolute;
   }
@@ -94,7 +101,6 @@
   
   .card:nth-child(1).animate {
     animation-name: slide-in-left;
-    
   }
   
   .card:nth-child(2).animate {
@@ -131,14 +137,12 @@
     }
   }
 
-  @keyframes slide-in-top{
+  @keyframes fade-in{
     from {
-        opacity:0;
-        transform: translateY(-100%);
+        opacity: 0;
     }
     to {
         opacity: 1;
-        transform: none;
     }
   }
 
@@ -159,6 +163,24 @@
     top: 50%;
     transform: translateY(100%);
  
+  }
+
+  .card:hover .app-description {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .app-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+    z-index: 1;
   }
 
   @keyframes fade-in-text{

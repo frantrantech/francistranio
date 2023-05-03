@@ -3,6 +3,7 @@ import "./PortfolioPage.css";
 
 function PortfolioPage() {
   const cardsRef = useRef([]);
+  const portfolioTextRef = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -11,7 +12,7 @@ function PortfolioPage() {
       threshold: 0.5,
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const card_observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.5) {
           entry.target.classList.add("animate");
@@ -20,15 +21,27 @@ function PortfolioPage() {
     }, options);
 
     cardsRef.current.forEach((card) => {
-      observer.observe(card);
+      card_observer.observe(card);
     });
 
-    return () => observer.disconnect();
+    const portfolio_text_observer = new IntersectionObserver( (entries) => {
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > 0.5) {
+          entry.target.classList.add("animate-text");
+        } 
+      });
+    }, options);
+
+    portfolio_text_observer.observe(portfolioTextRef.current)
+
+
+
+    return () => card_observer.disconnect(); portfolio_text_observer.disconnect();
   }, []);
 
   return (
     <div className="PortfolioWrapper">
-      <div className="portfolioText">MY PORTFOLIO</div>
+      <div className="portfolioText" ref={portfolioTextRef}>MY PORTFOLIO</div>
 
       <div className="cardsWrapper">
 

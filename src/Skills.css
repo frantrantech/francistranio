@@ -14,11 +14,20 @@
 
 .skills-text {
     position: relative;
+    opacity: 0;
     top: 10%;
     text-align: center;
     font-weight: bold;
     font-family: "Gill Sans", sans-serif;
     font-size: 2em;
+}
+
+.animate-skills{
+  animation-name: fade-in;
+  animation-delay: 0ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
 }
 
 /* Styling for line layouts */
@@ -115,6 +124,15 @@
         color:white;
         transform: translateX(0%);
       }
+  }
+
+  @keyframes fade-in {
+    from{
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   .line-animiation-wrapper:nth-child(1).text-slide-animation {
