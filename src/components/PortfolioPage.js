@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./PortfolioPage.css";
+import "../styling/PortfolioPage.css";
 
 function PortfolioPage() {
   const cardsRef = useRef([]);
@@ -41,7 +41,7 @@ function PortfolioPage() {
 
   return (
     <div className="PortfolioWrapper">
-      <div className="portfolioText" ref={portfolioTextRef}>MY PORTFOLIO</div>
+      <div className="portfolioText" ref={portfolioTextRef}>PORTFOLIO</div>
 
       <div className="cardsWrapper">
 

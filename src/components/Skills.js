@@ -1,4 +1,4 @@
-import "./Skills.css"
+import "../styling/Skills.css"
 import { useEffect, useRef } from "react"
 
 function Skills() {

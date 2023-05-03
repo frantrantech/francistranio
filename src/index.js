@@ -1,18 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import IntroPage from './IntroPage';
-import PortfolioPage from './PortfolioPage';
-import MenuBar from './MenuBar'
-import Skills from './Skills';
-import Contact from './Contact';
+import './styling/index.css';
 import reportWebVitals from './reportWebVitals';
-import LoadingScreen from './LoadingScreen';
+import LoadingScreen from './components/LoadingScreen';
 import Suspense from 'react'
 // import App from './App'
 
 
-const App = React.lazy(() => import('./App'));
+const App = React.lazy(() => import('./components/App'));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

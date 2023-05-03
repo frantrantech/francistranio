@@ -1,4 +1,4 @@
-import './IntroPage.css'
+import '../styling/IntroPage.css'
 import { useEffect } from 'react'
 import SoftwareEngineer from './SoftwareEngineer';
 import { TypeAnimation } from 'react-type-animation';

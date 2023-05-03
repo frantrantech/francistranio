@@ -1,4 +1,4 @@
-import './SoftwareEngineer.css'
+import '../styling/SoftwareEngineer.css'
 import anime from 'animejs'
 import { useEffect, useRef} from 'react';
 
