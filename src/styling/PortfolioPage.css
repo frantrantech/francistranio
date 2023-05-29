@@ -1,13 +1,18 @@
+:root{
+  --background-color: #e0e0e3;
+}
+
 .portfolio-wrapper {
     height: 110vh;
     width: 100vw;
-    background-color:#e0e0e3;
+    background-color: var(--background-color);
     color: #24243c;
   }
 
   .portfolio-flex-wrapper{
     display: flex;
     position: relative;
+    flex-shrink: 3; 
   }
   
   .portfolioText {
@@ -59,9 +64,25 @@
     /* Begin box drawing animation*/
   }
 
-  .portfolio-terminal{
-    margin-top: 10%;
-    margin-left: 2.5%;
+  .portfolio-items-wrapper{
+    /* margin-top: 10%;
+    margin-left: 2.5%; */
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 70%;
+    max-height: 70%;
+    position: relative;
+    margin-top: 10%
+  }
+
+  .portfolio-item-class{
+    width: 100%;
+    height: 100%;
+  }
+  #gtg-portfolio-item{
+    color: aqua;
   }
 
 
@@ -87,7 +108,6 @@
     padding-bottom: 100%;
   }
 
-  
   .portfolio-card img {
     position: absolute;
     top: 5%;
@@ -98,7 +118,7 @@
     height: 90%;
   }
 
-
+  
   .cardText{
     position: absolute;
   }
@@ -211,7 +231,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 20px;
+    width: 0px;
     height: 0;
     border: 1px solid #24243c;
     border-left: none;
@@ -230,13 +250,12 @@
     position: absolute;
     top: 0;
     right: 50%;
-    width: 20px;
+    width: 0px;
     height: 0;
     border: 1px solid #24243c;
     border-right: none;
     border-bottom: none;
-  
-    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+    transition: height 0.15s ease-out, width 0.15s ease-out 0.15s, ;
   }
   
   /* Top left corner Animation*/

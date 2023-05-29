@@ -1,10 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styling/PortfolioPage.css";
+import PortfolioItem from "./PortfolioItem";
 
 
 function PortfolioPage() {
   const cardsRef = useRef([]);
   const portfolioTextRef = useRef(null);
+  const [mostRecentHoveredCardRef, setMostRecentHoveredCardRef]= useState(null);
+
+  function handleMouseEnter (event) {
+    /* We initialized to null, we are going to pretend this is the gtg element*/
+    if (mostRecentHoveredCardRef === null) {
+      console.log("here")
+    }
+
+    /* If we are here, we need to perform the animation */
+    setMostRecentHoveredCardRef(prevState => event.target);
+    console.log(mostRecentHoveredCardRef);
+  }
 
   useEffect(() => {
     const options = {
@@ -13,11 +26,16 @@ function PortfolioPage() {
       threshold: 0.5,
     };
 
+    /* Observers for rendering in icons*/
     const card_observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.5) {
           entry.target.classList.add("animate");
         } 
+        if( entry){
+          entry.target.addEventListener('mouseenter', handleMouseEnter);
+        }
+       
       });
     }, options);
 
@@ -25,6 +43,7 @@ function PortfolioPage() {
       card_observer.observe(card);
     });
 
+     /* Observer for rendering in text*/
     const portfolio_text_observer = new IntersectionObserver( (entries) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.5) {
@@ -49,8 +68,21 @@ function PortfolioPage() {
       CARD  CARD    |----------------|
 
       App Name and app description change based on what is being hovered
-  
-  */
+
+      We cant dynamically render the terminal so our workaround is:
+      
+      We are going to have four square_terminals that render the text animation inside them.
+
+      onHover for a portfolio_card
+        - if the portfolio_card is corresponding the square_terminal
+          - animate the terminal on the screen to go right
+          - animate the corresponding terminal down
+          - Do not repeat type animation
+          - Type animation should only appear for the first time
+
+        
+
+    */
   return (
     <div className="portfolio-wrapper">
       <div className="portfolioText" ref={portfolioTextRef}>PORTFOLIO</div>
@@ -136,9 +168,28 @@ function PortfolioPage() {
           </div>
         </div>
 
-        <div className="portfolio-terminal">
-            <img src="square_terminal.svg"/>
-          </div>
+        {/* <div className = "portfolio-terminal">
+          <img src="square_terminal.svg"/>
+        </div> */}
+        <div className = "portfolio-items-wrapper">
+          <span className="portfolio-item-class" id="gtg-portfolio-item">
+            <PortfolioItem /> 
+          </span>
+
+          <span>
+          <PortfolioItem className="portfolio-item-class" itemId="application-portfolio-item"/>
+          </span>
+
+          <span>
+          <PortfolioItem className="portfolio-item-class" itemId="discord-portfolio-item"/> 
+          </span>
+
+          <span>
+          <PortfolioItem className="portfolio-item-class" itemId="discord-portfolio-item"/> 
+          </span>
+          
+        </div>
+
       </div>
     </div>
   );

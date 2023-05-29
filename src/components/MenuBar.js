@@ -13,11 +13,11 @@ function MenuBar () {
     return (
     <div className = "menu-container">
         <div className="grid-parent">
-            <div className ="ftranio">FRANCISTRAN.IO</div>
-            <div className ="home-div">HOME</div>
-            <div className ="portfolio-div">PORTFOLIO</div>
-            <div className ="skills-div">SKILLS</div>
-            <div className ="contact-div">CONTACT</div>
+            <div className ="ftranio menu-elem" >FRANCISTRAN.IO</div>
+            <div className ="home-div menu-elem">HOME</div>
+            <div className ="portfolio-div menu-elem">PORTFOLIO</div>
+            <div className ="skills-div menu-elem">SKILLS</div>
+            <div className ="contact-div menu-elem">CONTACT</div>
         </div>
     </div>
     )

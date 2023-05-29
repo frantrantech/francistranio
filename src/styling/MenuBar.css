@@ -1,6 +1,6 @@
 .menu-container {
   position: sticky;
-  width: 100%;
+  max-width: 100%;
   top: 0;
   background-color: #1b1b20;
   color: #e6e6fa;
@@ -8,6 +8,10 @@
   display: flex;
   /* justify-content: space-between;
   align-items: center; */
+    overflow-x: hidden;
+    word-wrap: break-word;
+
+
 }
 
 .grid-parent {
@@ -16,8 +20,12 @@
   grid-column-gap: 5.7%;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   letter-spacing:2.7px;
+  grid-auto-flow: column;
+  max-width: 100%;
 }
+
 
 /*  If we are using a grid with more than one row
  row-start, col-start, row-end, col-end 
