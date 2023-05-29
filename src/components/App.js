@@ -19,7 +19,7 @@ function App ()  {
         <div>
             <Suspense fallback = {<LoadingScreen/>}>
                 < IntroPage />
-                {/* < MenuBar /> */}
+                < MenuBar />
                 < PortfolioPage />
                 < Skills />
                 < Contact />

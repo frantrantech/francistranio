@@ -5,11 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import {useEffect, useRef} from 'react';
 
-
-
-
 function MenuBar () {
-
     return (
     <div className = "menu-container">
         <div className="grid-parent">
