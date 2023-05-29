@@ -2,7 +2,9 @@ import { useEffect, useRef } from "react";
 import "../styling/PortfolioItem.css";
 import { TypeAnimation } from 'react-type-animation';
 
-function PortfolioItem () {
+
+/* A portfolio Item is a window that displays the information of a project I did*/
+function PortfolioItem (props) {
   return (
     <div className="portfolio-item-wrapper" >
       <div className="square-terminal-wrapper">
@@ -11,11 +13,10 @@ function PortfolioItem () {
 
         <div className="square-terminal-text-animation-wrapper">
         <TypeAnimation
-          className='small-terminal-text'
           sequence={[
             '', // Initial Delay setting
             500,
-            '$ App Name: GTG Calisthenics',
+            props.text,
             1000,
             () => {}
           ]}

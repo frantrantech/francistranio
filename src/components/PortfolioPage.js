@@ -6,17 +6,22 @@ import PortfolioItem from "./PortfolioItem";
 function PortfolioPage() {
   const cardsRef = useRef([]);
   const portfolioTextRef = useRef(null);
-  const [mostRecentHoveredCardRef, setMostRecentHoveredCardRef]= useState(null);
 
+  const portfolioItemsRef = useRef([]);
+
+  /* 0 : gtg, 1 : application, 3: moodle, 4: discord*/
+  const [mostRecentHoveredCard, setMostRecentHoveredCard ]= useState(0);
+  const previousHoveredCard = useRef(mostRecentHoveredCard);
+
+
+  /* Gtg is intitalized as the first element
+     
+      the "active/current" PortfolioItem on the screen is mostRecentHoveredCardRef*/
   function handleMouseEnter (event) {
-    /* We initialized to null, we are going to pretend this is the gtg element*/
-    if (mostRecentHoveredCardRef === null) {
-      console.log("here")
-    }
-
-    /* If we are here, we need to perform the animation */
-    setMostRecentHoveredCardRef(prevState => event.target);
-    console.log(mostRecentHoveredCardRef);
+    // let currentPortfolioItem = mostRecentHoveredCard
+    let newPortfolioItem = event.target.getAttribute('index-attribute')
+    // console.log(currentPortfolioItem == newPortfolioItem);
+    setMostRecentHoveredCard(newPortfolioItem);
   }
 
   useEffect(() => {
@@ -54,10 +59,30 @@ function PortfolioPage() {
 
     portfolio_text_observer.observe(portfolioTextRef.current)
 
+    /* Code to run each time our state changes*/
+    const portfolioRefToExit = portfolioItemsRef.current[ parseInt(previousHoveredCard.current)];
+    const portfolioRefToEnter = portfolioItemsRef.current[ parseInt(mostRecentHoveredCard)]
 
+    if (parseInt(previousHoveredCard.current) == parseInt(mostRecentHoveredCard)){
+        /* Did not change items, do nothing */
+      } else {
+        /* Add exiting attribute to refToExit and active to refToEnter*/
+        portfolioRefToExit.setAttribute('data-visibility', 'exiting')
+        portfolioRefToEnter.setAttribute('data-visibility', 'active')
+          /* Update the previous card to the one we just hovered*/
+      previousHoveredCard.current = mostRecentHoveredCard;
+      setTimeout(() => {
+        portfolioRefToExit.setAttribute('data-visibility', 'inactive')
+      },1000);
+     
+      }
+  
+    
 
     return () => card_observer.disconnect(); portfolio_text_observer.disconnect();
-  }, []);
+  }, [mostRecentHoveredCard]);
+
+
 
 
   /* We probably want to change the layout to  
@@ -90,7 +115,7 @@ function PortfolioPage() {
       <div className="portfolio-flex-wrapper">
         <div className="cardsWrapper">
           {/* Need 2 a tags to make the work and animate the lines properly*/}
-          <div className="portfolio-card" ref={(el) => (cardsRef.current[0] = el)}>
+          <div  index-attribute="0" className="portfolio-card" ref={(el) => (cardsRef.current[0] = el)}>
             <span>
               <span>
                 <a href="https://github.com/yungfran/gtg" target="_blank">
@@ -109,7 +134,7 @@ function PortfolioPage() {
             </a>
           </div>
 
-          <div className="portfolio-card" ref={(el) => (cardsRef.current[1] = el)}>
+          <div index-attribute="1" className="portfolio-card" ref={(el) => (cardsRef.current[1] = el)}>
               <span>
                 <span>
                   <a href="https://github.com/yungfran/Application-Filler-Python" target="_blank">
@@ -128,7 +153,7 @@ function PortfolioPage() {
               </a>
           </div>
 
-          <div className="portfolio-card" ref={(el) => (cardsRef.current[2] = el)}>
+          <div index-attribute="2" className="portfolio-card" ref={(el) => (cardsRef.current[2] = el)}>
               <span>
                 <span>
                   <a href="https://github.com/yungfran/moodle-iOS" target="_blank">
@@ -148,7 +173,7 @@ function PortfolioPage() {
           </div>
 
 
-          <div className="portfolio-card" ref={(el) => (cardsRef.current[3] = el)}>
+          <div index-attribute="3" className="portfolio-card" ref={(el) => (cardsRef.current[3] = el)}>
               <span>
                 <span>
                   <a href="https://github.com/yungfran/interrupted_me" target="_blank">
@@ -168,26 +193,26 @@ function PortfolioPage() {
           </div>
         </div>
 
-        {/* <div className = "portfolio-terminal">
-          <img src="square_terminal.svg"/>
-        </div> */}
         <div className = "portfolio-items-wrapper">
-          <span className="portfolio-item-class" id="gtg-portfolio-item">
-            <PortfolioItem /> 
+          {/* Initialize gtg to the most recent hovered */}
+          <span data-visibility="active" index-attribute="0" ref={(el) => (portfolioItemsRef.current[0] = el)}
+          className="portfolio-item-class" id="gtg-portfolio-item">
+            <PortfolioItem text="$App Name: GTG Calisthenics"/> 
           </span>
 
-          <span>
-          <PortfolioItem className="portfolio-item-class" itemId="application-portfolio-item"/>
+          <span data-visibility="inactive" index-attribute="1" ref={(el) => (portfolioItemsRef.current[1] = el)} 
+            className="portfolio-item-class" id="application-portfolio-item">
+            <PortfolioItem  text="$App Name: Application "/>
           </span>
 
-          <span>
-          <PortfolioItem className="portfolio-item-class" itemId="discord-portfolio-item"/> 
+          <span data-visibility="inactive" index-attribute="2" ref={(el) => (portfolioItemsRef.current[2] = el)} className="portfolio-item-class" id="moodle-portfolio-item" >
+          <PortfolioItem  text="$App Name: moodle" /> 
           </span>
 
-          <span>
-          <PortfolioItem className="portfolio-item-class" itemId="discord-portfolio-item"/> 
+          <span data-visibility="inactive" index-attribute="3" ref={(el) => (portfolioItemsRef.current[3] = el)}  className="portfolio-item-class" id="discord-portfolio-item" >
+            <PortfolioItem text="$App Name: discord"/> 
           </span>
-          
+
         </div>
 
       </div>
