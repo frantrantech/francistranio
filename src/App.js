@@ -4,14 +4,12 @@ import '../styling/index.css';
 import reportWebVitals from '../reportWebVitals';
 import LoadingScreen from './LoadingScreen';
 import {useState, useEffect} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const IntroPage = React.lazy(() => import('./IntroPage'));
 const PortfolioPage = React.lazy(() => import('./PortfolioPage'));
 const Skills = React.lazy(() => import('./Skills'));
 const Contact = React.lazy(() => import('./Contact'));
-const MenuBar = React.lazy(() => import('./MenuBar'));
 
 function App ()  {
 
@@ -19,7 +17,6 @@ function App ()  {
         <div>
             <Suspense fallback = {<LoadingScreen/>}>
                 < IntroPage />
-                < MenuBar />
                 < PortfolioPage />
                 < Skills />
                 < Contact />

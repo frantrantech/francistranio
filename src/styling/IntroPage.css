@@ -8,6 +8,18 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    background-position: 50% 0px;
+    /* https://photomosh.com/ */
+    background:url(../glitched_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #222;
+
+    /*
+    Background will stay in the same position relative to the viewport
+    Allowing it moved as we are scrolling
+     */
+    background-attachment: fixed; 
   }
   
   .terminal-wrapper {

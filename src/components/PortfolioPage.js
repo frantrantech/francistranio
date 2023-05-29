@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../styling/PortfolioPage.css";
 
+
 function PortfolioPage() {
   const cardsRef = useRef([]);
   const portfolioTextRef = useRef(null);

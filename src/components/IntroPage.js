@@ -32,7 +32,9 @@ function IntroPage() {
 
   return (
     <div className="background-container">
-      <img src="firstscreen.png" className="background-image" alt="Background" />
+
+      {/* <img src="firstscreen.png" className="background-image" alt="Background" /> */}
+      <div className="background-image"> </div>
 
       <div className="terminal-wrapper"> 
 
