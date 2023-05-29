@@ -2,7 +2,7 @@
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: #4a4a50;
+  background-color: #1b1b20;
   color: #e6e6fa;
   z-index: 9999;
   display: flex;
@@ -13,31 +13,51 @@
 .grid-parent {
   display: grid;
   grid-template-columns: 1fr repeat(3, auto) 1fr;
-  grid-template-rows: repeat(5, .5em);
-  grid-column-gap: 50px;
-  grid-row-gap: 5px;
+  grid-column-gap: 5.7%;
   justify-content: space-between;
   align-items: center;
+  letter-spacing:2.7px;
 }
 
-/* row-start, col-start, row-end, col-end */
+/*  If we are using a grid with more than one row
+ row-start, col-start, row-end, col-end 
+ grid-area: 2 / 4 / 3 / 5;  */
+
+
+ /* 
+  If we are using a grid with just 1 row and a bunch of columns,
+  we can use grid-column to specify the column instead if defining the entire area
+ */
+
 
 .ftranio {
-  grid-area: 3 / 4 / 4 / 5; 
+  /* grid-area: 2 / 4 / 3 / 5;  */
+  padding: 15px;
+  grid-column: 4; 
 }
 
 .home-div {
-  grid-area: 3 / 17 / 4 / 18; 
+  /* grid-area: 2 / 17 / 3 / 18;  */
+   grid-column: 17; 
+
+   padding:15px;
 }
 
 .portfolio-div {
-  grid-area: 3 / 18 / 4 / 19; 
+  /* grid-area: 2 / 18 / 3 / 19;  */
+   grid-column: 18; 
+   background-color: #556555;
+   padding:15px;
 }
 
 .skills-div {
-  grid-area: 3 / 19 / 4 / 20; 
+  /* grid-area: 2 / 19 / 3 / 20;  */
+   grid-column: 19; 
+   padding:15px;
 }
 
 .contact-div {
-  grid-area: 3 / 20 / 4 / 21; 
+  /* grid-area: 2 / 20 / 3 / 21;  */
+   grid-column: 20; 
+   padding:15px;
 }

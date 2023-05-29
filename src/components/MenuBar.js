@@ -13,7 +13,7 @@ function MenuBar () {
     return (
     <div className = "menu-container">
         <div className="grid-parent">
-            <div className ="ftranio">francistran.io</div>
+            <div className ="ftranio">FRANCISTRAN.IO</div>
             <div className ="home-div">HOME</div>
             <div className ="portfolio-div">PORTFOLIO</div>
             <div className ="skills-div">SKILLS</div>

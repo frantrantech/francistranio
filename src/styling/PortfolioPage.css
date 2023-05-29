@@ -1,7 +1,7 @@
 .PortfolioWrapper {
-    height: 80vh;
+    height: 100vh;
     position: relative;
-    background-color:#d0d0d6;
+    background-color:#e0e0e3;
     color: #24243c;
   }
   
@@ -36,7 +36,7 @@
     animation-fill-mode: forwards;
   }
   
-  .card {
+  .portfolio-card {
     /* background-color: #A0A09F; */
     padding: 20px;
     flex-grow: 1;
@@ -57,29 +57,29 @@
 
 
   /* When a card is hovered, apply blur to img*/
-  .card:hover img {
+  .portfolio-card:hover img {
     filter: blur(5px);
   }
 
-  .card:hover .app-name{
+  .portfolio-card:hover .app-name{
     animation-name: fade-in-text;
     animation-timing-function: ease-in-out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
   }
 
-  .card:focus, .card:active {
+  .portfolio-card:focus, .card:active {
     outline: none;
   }
 
-  .card:before {
+  .portfolio-card:before {
     content: "";
     display: block;
     padding-bottom: 100%;
   }
 
   
-  .card img {
+  .portfolio-card img {
     position: absolute;
     top: 5%;
     left: 5%;
@@ -94,21 +94,21 @@
     position: absolute;
   }
 
-  .card.animate {
+  .portfolio-card.animate {
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
   
-  .card:nth-child(1).animate {
+  .portfolio-card:nth-child(1).animate {
     animation-name: slide-in-left;
   }
   
-  .card:nth-child(2).animate {
+  .portfolio-card:nth-child(2).animate {
     animation-name: slide-in-left;
     animation-delay: .5s;
   }
   
-  .card:nth-child(3).animate {
+  .portfolio-card:nth-child(3).animate {
     animation-name: slide-in-left;
     animation-delay: 1s;
   }
@@ -151,21 +151,20 @@
     top: 5%;
     left: 50%;
     font-size: 1.25em;
-    color: white;
+    color: #39FF14;
     transform: translateX(-50%);
-    z-index: 2;
+    z-index: 5;
     opacity: 0;
     text-align: center;
   }
 
   .app-description {
-    left:25%;
+    left: 25%;
     top: 50%;
     transform: translateY(100%);
- 
   }
 
-  .card:hover .app-description {
+  .portfolio-card:hover .app-description {
     visibility: visible;
     opacity: 1;
   }
@@ -175,6 +174,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     color: #fff;
     padding: 10px;
     visibility: hidden;
@@ -192,7 +192,7 @@
     }
   }
 
-  .card > span:after {
+  .portfolio-card > span:after {
     content: '';
     position: absolute;
     top: 0;
@@ -205,13 +205,13 @@
     transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
   }
   
-  .card:hover > span:after {
+  .portfolio-card:hover > span:after {
     width: calc(50% - 1px);
     height: calc(100% - 2px);
     transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
   }
   
-  .card > span:before {
+  .portfolio-card > span:before {
     content: '';
     position: absolute;
     top: 0;
@@ -227,13 +227,13 @@
   
   /* Top left corner Animation*/
   
-  .card:hover > span:before {
+  .portfolio-card:hover > span:before {
     width: calc(50% - 1px);
     height: calc(100% - 2px);
     transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
   }
   
-  .card > span > span:before {
+  .portfolio-card > span > span:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -243,7 +243,7 @@
     opacity: 0;
   }
   
-  .card:hover > span > span:before {
+  .portfolio-card:hover > span > span:before {
     opacity: 1;
     border-bottom: 1px solid #24243c;
     width: calc(50%);
@@ -251,7 +251,7 @@
     transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
   }
   
-  .card > span > span:after {
+  .portfolio-card > span > span:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -262,7 +262,7 @@
   }
   
   /* bottom left animation */
-  .card:hover > span > span:after {
+  .portfolio-card:hover > span > span:after {
     opacity: 1;
     border-bottom: 1px solid #24243c;
     width: calc(50%);
