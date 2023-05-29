@@ -1,24 +1,17 @@
-.PortfolioWrapper {
-    height: 100vh;
-    position: relative;
+.portfolio-wrapper {
+    height: 110vh;
+    width: 100vw;
     background-color:#e0e0e3;
     color: #24243c;
   }
-  
-  .cardsWrapper {
+
+  .portfolio-flex-wrapper{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 45%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -30%);
-    width: 80%;
-    gap: 20px; /* add gap between the cards */
+    position: relative;
   }
   
   .portfolioText {
-    position: absolute;
+    position: relative;
     opacity: 0;
     font-size: 2em;
     top: 10%;
@@ -35,13 +28,23 @@
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
   }
+
+  .cardsWrapper {
+    /* top: 50%; */
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 50%;
+    position: relative;
+    margin-top: 10%;
+  }
   
   .portfolio-card {
     /* background-color: #A0A09F; */
     padding: 20px;
-    flex-grow: 1;
-    flex-basis: 1;
-    flex-shrink: 0; /* Don't resize our card*/
+
     margin: 0 10px;
     position: relative;
     opacity: .7;
@@ -51,13 +54,19 @@
     box-sizing: border-box !important; /* Don't resize our card*/
     /* border: solid #d0d0d6 2px; */
 
+    width: 45%;
+    height: 45%;
     /* Begin box drawing animation*/
-    
+  }
+
+  .portfolio-terminal{
+    margin-top: 10%;
+    margin-left: 2.5%;
   }
 
 
   /* When a card is hovered, apply blur to img*/
-  .portfolio-card:hover img {
+  /* .portfolio-card:hover img {
     filter: blur(5px);
   }
 
@@ -66,7 +75,7 @@
     animation-timing-function: ease-in-out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-  }
+  } */
 
   .portfolio-card:focus, .card:active {
     outline: none;
