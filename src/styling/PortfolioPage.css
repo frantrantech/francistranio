@@ -113,6 +113,11 @@
     animation-delay: 1s;
   }
 
+  .portfolio-card:nth-child(4).animate {
+    animation-name: slide-in-left;
+    animation-delay: 1s;
+  }
+
 
 
 @keyframes slide-in-left {
