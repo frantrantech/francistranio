@@ -1,4 +1,4 @@
-.menu-container {
+/* .menu-container {
   position: sticky;
   max-width: 100%;
   top: 0;
@@ -6,8 +6,6 @@
   color: #e6e6fa;
   z-index: 9999;
   display: flex;
-  /* justify-content: space-between;
-  align-items: center; */
     overflow-x: hidden;
     word-wrap: break-word;
 
@@ -37,35 +35,72 @@
   we can use grid-column to specify the column instead if defining the entire area
  */
 
-
+ 
+/* 
 .ftranio {
-  /* grid-area: 2 / 4 / 3 / 5;  */
   padding: 15px;
   grid-column: 4; 
 }
 
 .home-div {
-  /* grid-area: 2 / 17 / 3 / 18;  */
    grid-column: 17; 
 
    padding:15px;
 }
 
 .portfolio-div {
-  /* grid-area: 2 / 18 / 3 / 19;  */
    grid-column: 18; 
    background-color: #556555;
    padding:15px;
 }
 
 .skills-div {
-  /* grid-area: 2 / 19 / 3 / 20;  */
    grid-column: 19; 
    padding:15px;
 }
 
 .contact-div {
-  /* grid-area: 2 / 20 / 3 / 21;  */
    grid-column: 20; 
    padding:15px;
+} */
+
+.menu-container {
+  position: sticky;
+  max-width: 100%;
+  top: 0;
+  background-color: #1b1b20;
+  color: #e6e6fa;
+  z-index: 9999;
+  display: flex;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+.grid-parent {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  letter-spacing: 2.7px;
+  max-width: 100%;
+}
+
+.ftranio {
+  padding: 15px;
+  margin-left: 7.5%;
+}
+
+.home-div {
+  margin-left:36%;
+}
+
+.portfolio-div,
+.skills-div,
+.contact-div {
+  padding: 15px;
+  margin-left:2%;
+}
+
+.portfolio-div {
+  background-color: #556555;
 }
