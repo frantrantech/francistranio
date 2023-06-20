@@ -1,19 +1,20 @@
 import '../styling/MenuBar.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {useEffect, useRef} from 'react';
+import IntroPage from './IntroPage';
+import PortfolioPage from './PortfolioPage';
+import Skills from './Skills';
+import { useState, useRef } from 'react';
 
 function MenuBar () {
+
+    
     return (
     <div className = "menu-container">
         <div className="grid-parent">
             <div className ="ftranio menu-elem" >FRANCISTRAN.IO</div>
-            <div className ="home-div menu-elem">HOME</div>
-            <div className ="portfolio-div menu-elem">PORTFOLIO</div>
-            <div className ="skills-div menu-elem">SKILLS</div>
-            <div className ="contact-div menu-elem">CONTACT</div>
+            <a href="#home-section" className ="home-div menu-elem">HOME</a>
+            <a href="#portfolio-section" className ="portfolio-div menu-elem">PORTFOLIO</a>
+            <a href="#skills-section" className ="skills-div menu-elem">SKILLS</a>
+            <a href="#contact-section" className ="contact-div menu-elem">CONTACT</a>
         </div>
     </div>
     )

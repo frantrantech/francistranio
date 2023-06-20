@@ -32,7 +32,7 @@ function IntroPage() {
 
   return (
     <div className="background-container">
-
+      <section id="home-section"> 
       {/* <img src="firstscreen.png" className="background-image" alt="Background" /> */}
       <div className="background-image"> </div>
 
@@ -72,6 +72,7 @@ function IntroPage() {
       </div>
    
       </div>
+      </section>
     </div>
   );
 }

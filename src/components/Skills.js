@@ -41,6 +41,7 @@ function Skills() {
 
   return (
     <div className="skills-wrapper">
+      <section id="skills-section"> 
       <div className="separation-drawing"></div>
       <div className="skills-text" ref={skills_text_ref}>SKILLS</div>
       <div className="grid-container">
@@ -78,6 +79,7 @@ function Skills() {
 
         </div>
       </div>
+      </section>
     </div>
   );
 }

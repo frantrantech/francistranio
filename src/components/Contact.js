@@ -3,6 +3,7 @@ import '../styling/Contact.css'
 function Contact () {
     return (
         <div className="contact-wrapper">
+            <section id="contact-section"> 
             <div className="contact-text-wrapper">
                 <div className='get-in-touch'> GET IN TOUCH </div>
                 <div className = "draw-line"> </div>
@@ -18,6 +19,8 @@ function Contact () {
 
             <footer>
             </footer>
+
+            </section>
 
         </div>
     )

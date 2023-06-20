@@ -92,15 +92,37 @@
 
 .home-div {
   margin-left:36%;
+  padding:15px;
 }
 
 .portfolio-div,
 .skills-div,
 .contact-div {
   padding: 15px;
-  margin-left:2%;
+  margin-left:1.5%;
 }
 
-.portfolio-div {
-  background-color: #556555;
+/* #556555 is 85,101,85,0 */
+a {
+  text-decoration: none;
+  color:white !important;
+  background-color: rgba(85,101,85,0)
+}
+
+
+a:hover {
+  animation: fade-in-color;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fade-in-color{
+  from {
+    background-color: rgba(85,101,85,0) /* (color, opacity) */
+  }
+
+  to {
+    background-color: rgba(85,101,85,1)
+  }
+
 }

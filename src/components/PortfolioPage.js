@@ -110,6 +110,7 @@ function PortfolioPage() {
     */
   return (
     <div className="portfolio-wrapper">
+      <section id="portfolio-section">
       <div className="portfolioText" ref={portfolioTextRef}>PORTFOLIO</div>
       
       <div className="portfolio-flex-wrapper">
@@ -216,6 +217,7 @@ function PortfolioPage() {
         </div>
 
       </div>
+      </section>
     </div>
   );
 }
