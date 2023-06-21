@@ -29,11 +29,13 @@ function PortfolioItem (props) {
         <span className="project-description-text"> 
           {props.projectDescription}
         </span>
-      </div>  
 
       <a style={{textDecoration:"none"}} href={projectLink} target="_blank" className="github-link-wrapper" >
         <img ref={githubSVGRef}src="github-mark.svg"/>
       </a>
+      </div>  
+
+
     
     </div>
   )

@@ -4,7 +4,7 @@
     display:block;
     font-family: Menlo, 'Courier New', Courier, monospace;
     width: 85%;
-    height: 85%;
+    height: 100%;
 }
 
 .square-terminal-wrapper {
@@ -48,10 +48,15 @@
 }
 
 .github-link-wrapper {
-    position: absolute;
+    position: relative;
     z-index:2;
-    max-width: 98px;
-    max-height: 96px;
-    top: 90%;
-    left: 40%;
+    width: 50%;
+    height: 50%;
+}
+
+.github-link-wrapper img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    height: 50%;
 }
