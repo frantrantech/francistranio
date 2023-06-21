@@ -2,7 +2,8 @@
   font-weight: 1000;
   color: #39FF14;
   /* color: #b9f3b9; */
-  font-family: Arial Rounded MT Bold,sans-serif ;
+  font-family: Arial Rounded MT Bold, Verdana, sans-serif ;
+  letter-spacing: 3px;
 }
 
 .ml11 .text-wrapper {

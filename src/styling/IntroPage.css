@@ -40,7 +40,7 @@
   
   .introduction {
     color: #39FF14;
-    font-family: Menlo;
+    font-family: Menlo, 'Courier New', Courier, monospace;
     max-width: 80%;
     overflow: hidden;
     position: absolute;

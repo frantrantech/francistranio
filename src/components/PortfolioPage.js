@@ -8,7 +8,7 @@ function PortfolioPage() {
   const portfolioTextRef = useRef(null);
   const portfolioItemsRef = useRef([]);
 
-  /* 0 : gtg, 1 : application, 3: moodle, 4: discord*/
+  /* 1 : gtg, 2 : application, 3: moodle, 4: discord*/
   const [mostRecentHoveredCard, setMostRecentHoveredCard ]= useState(0);
   const previousHoveredCard = useRef(mostRecentHoveredCard);
 
@@ -17,10 +17,7 @@ function PortfolioPage() {
      
       the "active/current" PortfolioItem on the screen is mostRecentHoveredCardRef*/
   function handleMouseEnter (event) {
-    // let currentPortfolioItem = mostRecentHoveredCard
-    console.log(event.target);
     let newPortfolioItem = event.target.getAttribute('index-attribute')
-    // console.log(currentPortfolioItem == newPortfolioItem);
     setMostRecentHoveredCard(newPortfolioItem);
   }
 
@@ -61,6 +58,7 @@ function PortfolioPage() {
 
     /* Code to run each time our state changes*/
     const portfolioRefToExit = portfolioItemsRef.current[ parseInt(previousHoveredCard.current)];
+    console.log(portfolioRefToExit);
     const portfolioRefToEnter = portfolioItemsRef.current[ parseInt(mostRecentHoveredCard)]
 
     if (parseInt(previousHoveredCard.current) == parseInt(mostRecentHoveredCard)){
@@ -104,10 +102,9 @@ function PortfolioPage() {
           - animate the corresponding terminal down
           - Do not repeat type animation
           - Type animation should only appear for the first time
-
-        
-
     */
+
+      /* Bring in the portfolio cards with react spring https://codesandbox.io/s/q6ffu*/
   return (
     <div className="portfolio-wrapper">
       <section id="portfolio-section">
@@ -115,74 +112,72 @@ function PortfolioPage() {
       
       <div className="portfolio-flex-wrapper">
         <div className="cardsWrapper">
-          {/* Need 2 a tags to make the work and animate the lines properly*/}
-          <div index-attribute="0" className="portfolio-card" ref={(el) => (cardsRef.current[0] = el)}>
-            <span style={{pointerEvents: 'none'}}>
-              <span >
-                  <span className="app-name" >
-                      GTG Calisthenics
 
-                  </span>
-              </span>
+          <div index-attribute="1" className="portfolio-card" ref={(el) => (cardsRef.current[1] = el)}>
+            <span style={{pointerEvents: 'none'}}>
+              <span></span>
             </span>
             <img  style={{pointerEvents: 'none'}} src="pulling-up-training-silhouette-svgrepo-com.svg" />
           </div>
 
-          <div index-attribute="1" className="portfolio-card" ref={(el) => (cardsRef.current[1] = el)}>
-              <span style={{pointerEvents: 'none'}}>
-                <span>
-                    <span className="app-name">
-                        Application Filler
-                    </span>
-                </span>
-              </span>
-                <img style={{pointerEvents: 'none'}}className="cardImg" src="resume-portfolio-svgrepo-com.svg" />
-          </div>
-
           <div index-attribute="2" className="portfolio-card" ref={(el) => (cardsRef.current[2] = el)}>
               <span style={{pointerEvents: 'none'}}>
-                <span>
-                    <span className="app-name">
-                        Moodle
-                    </span>
-                </span>
+                <span></span>
+              </span>
+                <img style={{pointerEvents: 'none'}} src="discord-mark-black.svg"/>
+          </div>
+
+          <div index-attribute="3" className="portfolio-card" ref={(el) => (cardsRef.current[3] = el)}>
+              <span style={{pointerEvents: 'none'}}>
+                <span></span>
               </span>
               <img style={{pointerEvents: 'none'}} src="moodle.svg" className="filter-green"/>
           </div>
 
-
-          <div index-attribute="3" className="portfolio-card" ref={(el) => (cardsRef.current[3] = el)}>
+          <div index-attribute="4" className="portfolio-card" ref={(el) => (cardsRef.current[4] = el)}>
               <span style={{pointerEvents: 'none'}}>
-                <span>
-                    <span className="app-name">
-                        interrupted_me
-                    </span>
-                </span>
+                <span></span>
               </span>
-                <img style={{pointerEvents: 'none'}} src="discord-mark-black.svg"/>
+              <img style={{pointerEvents: 'none'}}className="cardImg" src="resume-portfolio-svgrepo-com.svg" />
           </div>
         </div>
 
         <div className = "portfolio-items-wrapper">
           {/* Initialize gtg to the most recent hovered */}
+
           <span data-visibility="active" index-attribute="0" ref={(el) => (portfolioItemsRef.current[0] = el)}
-          className="portfolio-item-class" id="gtg-portfolio-item">
-            <PortfolioItem text="$App Name: GTG Calisthenics"/> 
+          className="portfolio-item-class" id="first-portfolio-item">
+            <PortfolioItem projectName="Click on a project to learn more"/>           
           </span>
 
-          <span data-visibility="inactive" index-attribute="1" ref={(el) => (portfolioItemsRef.current[1] = el)} 
+          <span data-visibility="inactive" index-attribute="1" ref={(el) => (portfolioItemsRef.current[1] = el)} className="portfolio-item-class" id="gtg-portfolio-item">
+            <PortfolioItem projectName="$App Name: GTG Calisthenics"
+             projectDescription="React and Node web application that computes and adjusts a bodyweight workout progression
+              following the greasing the groove methodology"
+              projectLink="https://github.com/yungfran/gtg"
+             /> 
+          </span>
+
+          <span data-visibility="inactive" index-attribute="2" ref={(el) => (portfolioItemsRef.current[2] = el)}  className="portfolio-item-class" id="discord-portfolio-item" >
+            <PortfolioItem projectName="$App Name: interrupted_me" 
+            projectDescription="An all-in-one discord bot meant to annoy your friends. 
+            Inconspicuously interrupt certain people when they speak, play notification / knocking sounds, ping server members randomly"
+            projectLink="https://github.com/yungfran/interrupted_me"/> 
+          </span>
+
+          <span data-visibility="inactive" index-attribute="3" ref={(el) => (portfolioItemsRef.current[3] = el)} className="portfolio-item-class" id="moodle-portfolio-item" >
+            <PortfolioItem  projectName="$App Name: Moodle" 
+            projectDescription="iOS application that allows users to record and track their mood via various visualizations"
+            projectLink="https://github.com/yungfran/moodle-iOS" /> 
+          </span>
+
+          <span data-visibility="inactive" index-attribute="4" ref={(el) => (portfolioItemsRef.current[4] = el)} 
             className="portfolio-item-class" id="application-portfolio-item">
-            <PortfolioItem  text="$App Name: Application "/>
+            <PortfolioItem  projectName="$App Name: laidOff "
+             projectDescription="Selenium script that automatically applies to linkedin easy apply roles. 
+             Completes and submits applications to Lever and Greenhouse job opening using links to role openings"
+             projectLink="https://github.com/yungfran/Application-Filler-Python"/>
           </span>
-
-          <span data-visibility="inactive" index-attribute="2" ref={(el) => (portfolioItemsRef.current[2] = el)} className="portfolio-item-class" id="moodle-portfolio-item" >
-          <PortfolioItem  text="$App Name: moodle" /> 
-          </span>
-
-          <span data-visibility="inactive" index-attribute="3" ref={(el) => (portfolioItemsRef.current[3] = el)}  className="portfolio-item-class" id="discord-portfolio-item" >
-            <PortfolioItem text="$App Name: discord"/> 
-          </span>
-
         </div>
 
       </div>

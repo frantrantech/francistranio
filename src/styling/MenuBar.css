@@ -76,7 +76,7 @@
   word-wrap: break-word;
 }
 
-.grid-parent {
+.flex-parent {
   display: flex;
   flex: 1 0 auto;
   align-items: center;
@@ -112,7 +112,7 @@
 
 
 /* #556555 is 85,101,85,0 */
-a {
+.menu-elem {
   text-decoration: none;
   color:white !important;
   background-color: rgba(85,101,85,0)
@@ -131,7 +131,7 @@ Fading out after hover is done via black magic
 
 
 */
-a:hover {
+.menu-elem:hover {
   animation: fade-in-color forwards;
   animation-duration: .3s;
   animation-timing-function: ease-in-out;
