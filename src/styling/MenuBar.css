@@ -101,13 +101,13 @@
 }
 
 .active_position {
-  animation: fade-in-color .5s forwards ;
-  animation-timing-function: linear;
+  animation: fade-in-color .3s forwards ;
+  animation-timing-function: ease-in-out;
 }
 
 .leaving_position {
-  animation: fade-out-color .5s forwards;
-  animation-timing-function: linear;
+  animation: fade-out-color .3s forwards;
+  animation-timing-function: ease-in-out;
 }
 
 
@@ -133,8 +133,8 @@ Fading out after hover is done via black magic
 */
 a:hover {
   animation: fade-in-color forwards;
-  animation-duration: .5s;
-  animation-timing-function: linear;
+  animation-duration: .3s;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes fade-in-color{

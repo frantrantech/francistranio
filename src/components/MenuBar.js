@@ -29,6 +29,21 @@ function MenuBar () {
     const SKILLS_POSITION = 1400;
     const CONTACT_POSITION = 1850;
 
+    function isPortfolioPosition(yPos){
+        return yPos >= PORTFOLIO_POSITION && yPos < 1400;
+    }
+
+    function isSkillPosition(yPos) {
+        return yPos >= SKILLS_POSITION && yPos < CONTACT_POSITION
+    }
+
+    function isContactPosition(yPos){
+        return yPos >= CONTACT_POSITION
+    }
+
+    function isHomePosition(yPos) {
+        return yPos < PORTFOLIO_POSITION
+    }
 
     useEffect( () => {
         /* Whenever we scroll, update state (screenYPos) */
@@ -37,7 +52,7 @@ function MenuBar () {
         const prevCurrentPosition = currentPosition;
         
         /* This is the first time we reached the portfolio area*/
-        if (screenYPos >= 500 && screenYPos < 1400 && currentPosition !== PORTFOLIO){
+        if (isPortfolioPosition(screenYPos) && currentPosition !== PORTFOLIO){
             /* Update currentPosition*/
             setCurrentPosition(PORTFOLIO);
             /* Remove leaving_position in case it was added so we can continue to animate*/
@@ -54,7 +69,7 @@ function MenuBar () {
             }
         } 
         
-        else if(screenYPos >= 1400 && screenYPos < 1850 && currentPosition !== SKILLS){
+        else if( isSkillPosition(screenYPos) && currentPosition !== SKILLS){
             setCurrentPosition(SKILLS)
             skillsRef.current.classList.remove("leaving_position");
             skillsRef.current.classList.add("active_position");
@@ -68,14 +83,14 @@ function MenuBar () {
             }
         } 
 
-        else if (screenYPos >= 1850 && currentPosition !== CONTACT) {
+        else if ( isContactPosition(screenYPos) && currentPosition !== CONTACT) {
             setCurrentPosition(CONTACT);
             contactRef.current.classList.remove("leaving_position");
             contactRef.current.classList.add("active_position");
             skillsRef.current.classList.remove("active_position");
             skillsRef.current.classList.add("leaving_position");
         } 
-        else if (screenYPos < 500 && currentPosition !== HOME){
+        else if ( isHomePosition(screenYPos) && currentPosition !== HOME){
             setCurrentPosition(HOME);
             homeRef.current.classList.remove("leaving_position");
             homeRef.current.classList.add("active_position");
