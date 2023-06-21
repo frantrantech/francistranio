@@ -86,15 +86,15 @@ function MenuBar () {
 
     }, [screenYPos]) /* Update whenever screenYPos changes*/
 
-
+    /* Classes have leaving_position by default so that we can animate them fading out*/
     return (
     <div className = "menu-container">
         <div className="grid-parent">
             <div className ="ftranio menu-elem" >FRANCISTRAN.IO</div>
-            <a ref={homeRef} href="#home-section" className ="home-div menu-elem">HOME</a>
-            <a ref={portfolioRef} href="#portfolio-section" className ="portfolio-div menu-elem">PORTFOLIO</a>
-            <a ref={skillsRef} href="#skills-section" className ="skills-div menu-elem">SKILLS</a>
-            <a ref={contactRef} href="#contact-section" className ="contact-div menu-elem">CONTACT</a>
+            <a ref={homeRef} href="#home-section" className ="home-div menu-elem leaving_position">HOME</a>
+            <a ref={portfolioRef} href="#portfolio-section" className ="portfolio-div menu-elem leaving_position">PORTFOLIO</a>
+            <a ref={skillsRef} href="#skills-section" className ="skills-div menu-elem leaving_position">SKILLS</a>
+            <a ref={contactRef} href="#contact-section" className ="contact-div menu-elem leaving_position">CONTACT</a>
         </div>
     </div>
     )

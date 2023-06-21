@@ -118,10 +118,23 @@ a {
   background-color: rgba(85,101,85,0)
 }
 
+/* 
+Fading out after hover is done via black magic
+
+1.) When we hover, we are using "forwards" to keep the color change as long as we are hovering
+2.) A class that has leaving_position performs fade out
+
+3.) When we move our mouse off a leaving_position class, the fade out animation plays
+
+*** This is because it reverts back to its original state of playing that fade out animation***
+
+
+
+*/
 a:hover {
-  animation: fade-in-color;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: fade-in-color forwards;
+  animation-duration: .5s;
+  animation-timing-function: linear;
 }
 
 @keyframes fade-in-color{
