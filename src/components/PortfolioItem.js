@@ -30,10 +30,13 @@ function PortfolioItem (props) {
           {props.projectDescription}
         </span>
 
-      <a style={{textDecoration:"none"}} href={projectLink} target="_blank" className="github-link-wrapper" >
-        <img ref={githubSVGRef}src="github-mark.svg"/>
-      </a>
+        <a style={{textDecoration:"none"}} href={projectLink} target="_blank" >
+        <img className="github_svg"ref={githubSVGRef}src="github-mark.svg"/>
+        </a>
+
       </div>  
+
+
 
 
     
