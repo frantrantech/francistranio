@@ -1,9 +1,12 @@
 import '../styling/Contact.css'
+import {useRef} from 'react';
 
 function Contact () {
+
+
     return (
         <div className="contact-wrapper">
-            <section id="contact-section"> 
+            <section  id="contact-section"> 
             <div className="contact-text-wrapper">
                 <div className='get-in-touch'> GET IN TOUCH </div>
                 <div className = "draw-line"> </div>

@@ -1,5 +1,5 @@
 import '../styling/IntroPage.css'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import SoftwareEngineer from './SoftwareEngineer';
 import { TypeAnimation } from 'react-type-animation';
 import anime from 'animejs/lib/anime.es.js';

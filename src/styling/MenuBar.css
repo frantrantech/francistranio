@@ -87,6 +87,7 @@
 
 .ftranio {
   padding: 15px;
+  padding-left: 25px;
   margin-left: 7.5%;
 }
 
@@ -95,12 +96,20 @@
   padding:15px;
 }
 
-.portfolio-div,
-.skills-div,
-.contact-div {
+.portfolio-div, .skills-div, .contact-div {
   padding: 15px;
-  margin-left:1.5%;
 }
+
+.active_position {
+  animation: fade-in-color .5s forwards ;
+  animation-timing-function: linear;
+}
+
+.leaving_position {
+  animation: fade-out-color .5s forwards;
+  animation-timing-function: linear;
+}
+
 
 /* #556555 is 85,101,85,0 */
 a {
@@ -109,10 +118,9 @@ a {
   background-color: rgba(85,101,85,0)
 }
 
-
 a:hover {
   animation: fade-in-color;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -124,5 +132,14 @@ a:hover {
   to {
     background-color: rgba(85,101,85,1)
   }
+}
 
+@keyframes fade-out-color{
+  from {
+    background-color: rgba(85,101,85,1) /* (color, opacity) */
+  }
+
+  to {
+    background-color: rgba(85,101,85,0)
+  }
 }

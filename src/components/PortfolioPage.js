@@ -6,7 +6,6 @@ import PortfolioItem from "./PortfolioItem";
 function PortfolioPage() {
   const cardsRef = useRef([]);
   const portfolioTextRef = useRef(null);
-
   const portfolioItemsRef = useRef([]);
 
   /* 0 : gtg, 1 : application, 3: moodle, 4: discord*/
