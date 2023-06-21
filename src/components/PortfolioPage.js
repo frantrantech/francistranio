@@ -86,22 +86,28 @@ function PortfolioPage() {
   /* We probably want to change the layout to  
       PORTFOLIO     |----------------|
                     |App Name        |
-      CARD  CARD    |                |
+      CARD          |                |
                     |App description |
-      CARD  CARD    |----------------|
+      CARD          |----------------|
 
-      App Name and app description change based on what is being hovered
+      CARD  
 
-      We cant dynamically render the terminal so our workaround is:
-      
-      We are going to have four square_terminals that render the text animation inside them.
+      CARD    
 
-      onHover for a portfolio_card
-        - if the portfolio_card is corresponding the square_terminal
-          - animate the terminal on the screen to go right
-          - animate the corresponding terminal down
-          - Do not repeat type animation
-          - Type animation should only appear for the first time
+      Parallax the Cards, they each get a page
+        *Cards not on that page will still be mostly visible
+
+      Stars background
+      sticky terminal on right side
+
+      1: Moon and satelite [midnight black]
+
+      2: clouds and small react symbols[lavender]
+        2.a) react symbols will rotate
+
+      3: sun and clouds [redish orange]
+
+      4: gust of grass and trees [blue]
     */
 
       /* Bring in the portfolio cards with react spring https://codesandbox.io/s/q6ffu*/
