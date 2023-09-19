@@ -148,8 +148,9 @@
   }
 
   .portfolio-card.animate {
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   
   .portfolio-card:nth-child(1).animate {
@@ -158,17 +159,17 @@
   
   .portfolio-card:nth-child(2).animate {
     animation-name: slide-in-left;
-    animation-delay: .5s;
+    animation-delay: .25s;
   }
   
   .portfolio-card:nth-child(3).animate {
     animation-name: slide-in-left;
-    animation-delay: 1s;
+    animation-delay: 0s;
   }
 
   .portfolio-card:nth-child(4).animate {
     animation-name: slide-in-left;
-    animation-delay: 1s;
+    animation-delay: .25s;
   }
 
 

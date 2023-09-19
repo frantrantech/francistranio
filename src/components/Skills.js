@@ -63,7 +63,7 @@ function Skills() {
           </div>
 
           <div className="div3 color-animation-80" ref={(ref) => animatingElemsRef.current.push(ref)}>
-            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>TypeScript / React / Node</span>
+            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>JavaScript / React / Node</span>
           </div>
           <div className="div7 color-animation-60" ref={(ref) => animatingElemsRef.current.push(ref)}>
             <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>Full Stack Web Development</span>

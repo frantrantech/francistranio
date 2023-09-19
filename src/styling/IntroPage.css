@@ -10,7 +10,7 @@
     height: 100vh;
     background-position: 50% 0px;
     /* https://photomosh.com/ */
-    background:url(../glitched_background.jpg);
+    background:url(../img/glitched_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #222;

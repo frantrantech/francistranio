@@ -31,7 +31,7 @@ function PortfolioPage() {
     /* Observers for rendering in icons*/
     const card_observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.intersectionRatio > 0.5) {
+        if (entry.intersectionRatio > 0.4) {
           entry.target.classList.add("animate");
         } 
         if( entry){
@@ -130,21 +130,21 @@ function PortfolioPage() {
               <span style={{pointerEvents: 'none'}}>
                 <span></span>
               </span>
-                <img style={{pointerEvents: 'none'}} src="discord-mark-black.svg"/>
+                <img style={{pointerEvents: 'none'}} src="Spotify-Icon-Black-Logo.wine.svg"/>
           </div>
 
           <div index-attribute="3" className="portfolio-card" ref={(el) => (cardsRef.current[3] = el)}>
               <span style={{pointerEvents: 'none'}}>
                 <span></span>
               </span>
-              <img style={{pointerEvents: 'none'}} src="moodle.svg" className="filter-green"/>
+              <img style={{pointerEvents: 'none'}} src="moodle.svg"/>
           </div>
 
           <div index-attribute="4" className="portfolio-card" ref={(el) => (cardsRef.current[4] = el)}>
               <span style={{pointerEvents: 'none'}}>
                 <span></span>
               </span>
-              <img style={{pointerEvents: 'none'}}className="cardImg" src="resume-portfolio-svgrepo-com.svg" />
+              <img style={{pointerEvents: 'none'}} src="reactor.svg" />
           </div>
         </div>
 
@@ -165,10 +165,9 @@ function PortfolioPage() {
           </span>
 
           <span data-visibility="inactive" index-attribute="2" ref={(el) => (portfolioItemsRef.current[2] = el)}  className="portfolio-item-class" id="discord-portfolio-item" >
-            <PortfolioItem projectName="$App Name: interrupted_me" 
-            projectDescription="An all-in-one discord bot meant to annoy your friends. 
-            Inconspicuously interrupt certain people when they speak, play notification / knocking sounds, ping server members randomly"
-            projectLink="https://github.com/yungfran/interrupted_me"/> 
+            <PortfolioItem projectName="$App Name: Spinder" 
+            projectDescription="Generate custom recommendations from spotify by providing different artists, songs, and musical values"
+            projectLink="https://github.com/yungfran/Spinder"/> 
           </span>
 
           <span data-visibility="inactive" index-attribute="3" ref={(el) => (portfolioItemsRef.current[3] = el)} className="portfolio-item-class" id="moodle-portfolio-item" >
@@ -179,10 +178,9 @@ function PortfolioPage() {
 
           <span data-visibility="inactive" index-attribute="4" ref={(el) => (portfolioItemsRef.current[4] = el)} 
             className="portfolio-item-class" id="application-portfolio-item">
-            <PortfolioItem  projectName="$App Name: laidOff "
-             projectDescription="Selenium script that automatically applies to linkedin easy apply roles. 
-             Completes and submits applications to Lever and Greenhouse job opening using links to role openings"
-             projectLink="https://github.com/yungfran/Application-Filler-Python"/>
+            <PortfolioItem  projectName="$App Name: chemicalsNearMe "
+             projectDescription="Website that allows you to view superfund sites (chemical plants that produce excess dangerous chemicals) near your location or anywhere on the"
+             projectLink="https://github.com/yungfran/chemicals-near-me"/>
           </span>
         </div>
 
