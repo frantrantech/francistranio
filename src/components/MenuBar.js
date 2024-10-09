@@ -17,7 +17,6 @@ function MenuBar () {
     const skillsRef = useRef(null)
     const contactRef = useRef(null);
 
-
     /* Positions on the screen we could be in*/
     const HOME = "HOME_POSITION";
     const PORTFOLIO = "PORTFOLIO_POSITION";
@@ -97,8 +96,6 @@ function MenuBar () {
             portfolioRef.current.classList.remove("active_position");
             portfolioRef.current.classList.add("leaving_position");
         }
-        
-
     }, [screenYPos]) /* Update whenever screenYPos changes*/
 
     /* Classes have leaving_position by default so that we can animate them fading out*/

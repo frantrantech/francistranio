@@ -33,8 +33,6 @@ function Skills() {
       }, options);
 
       skills_text_observer.observe(skills_text_ref.current);
-
-
   
       return () => skills_observer.disconnect();
     }, []);
@@ -58,23 +56,23 @@ function Skills() {
           <div className="div2 color-animation-80" ref={(ref) => animatingElemsRef.current.push(ref)}>
             <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>Python</span>
           </div>
-          <div className="div6 color-animation-70 " ref={(ref) => animatingElemsRef.current.push(ref)}>
+          <div className="div6 color-animation-80 " ref={(ref) => animatingElemsRef.current.push(ref)}>
             <span className="text-slide-animation " ref={(ref) => animatingElemsRef.current.push(ref)}>Amazon Web Services</span>
           </div>
 
           <div className="div3 color-animation-80" ref={(ref) => animatingElemsRef.current.push(ref)}>
-            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>JavaScript / React / Node</span>
+            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>TypeScript / React / Node</span>
           </div>
-          <div className="div7 color-animation-60" ref={(ref) => animatingElemsRef.current.push(ref)}>
+          <div className="div7 color-animation-80" ref={(ref) => animatingElemsRef.current.push(ref)}>
             <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>Full Stack Web Development</span>
           </div>
 
 
-          <div className="div4 color-animation-50" ref={(ref) => animatingElemsRef.current.push(ref)}>
-            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>Swift</span>
+          <div className="div4 color-animation-60" ref={(ref) => animatingElemsRef.current.push(ref)}>
+            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>Go</span>
           </div>
-          <div className="div8 color-animation-50" ref={(ref) => animatingElemsRef.current.push(ref)}>
-            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>ACH Payments</span>
+          <div className="div8 color-animation-70" ref={(ref) => animatingElemsRef.current.push(ref)}>
+            <span className="text-slide-animation" ref={(ref) => animatingElemsRef.current.push(ref)}>Video UX & Infra</span>
           </div>
 
         </div>
